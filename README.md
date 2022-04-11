@@ -21,3 +21,22 @@ Um Cliente pode efetuar uma ou mais Reviews direcionadas a um restaurante espec�
 
 #### Favoritos (Classe de Associação)
 Um Cliente pode definir zero ou mais Restaurantes como favoritos.
+
+### Diagrama UML
+
+![image](https://user-images.githubusercontent.com/80784137/162761030-8e90a708-5d26-432b-8b0e-dadf76439d3e.png)
+
+### UML --> Relações
+
+Cliente(**idCliente**,username,password,nome,idade,nif,telefone,morada)
+Proprietário(**idProprietário**,username,password,nome,idade,nif,telefone,email)
+Restaurante(**idRestaurante**,nome,morada,tipo,idProprietário->Proprietário)
+Prato(**idPrato**,nome,categoria,preço,promoção,estado)
+Pedido(**idPedido**,estado,comentário adicional, morada de entrega, data de submissão, hora de submissão)
+RestaurantePedidoPrato(**idRestaurante**->Restaurante,**idPedido**->Pedido,**idPrato**->Prato)
+Horário(**idHorário**,abertura,encerramento)
+RestauranteHorário(**idRestaurante**->Restaurante, **idHorário**->Horário)
+ClientePedidoReview(**idPedido**->Pedido, idCliente->Cliente, null?, título, comentário, hora de submissão, data de submissão, avaliação, resposta)
+ClientePedidoFavorito(**idPedido**->Pedido, idCliente->Cliente, restaurante?, prato?, pedido?)
+
+
