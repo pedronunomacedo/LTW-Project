@@ -45,6 +45,7 @@ Cada Restaurante pode ter 1 ou mais **Pratos**, com um ID próprio, um nome, uma
 
 - **idPrato**
 - **nome**
+- **descrição do prato**
 - **tipo:** Prato Principal, Entrada, Acompanhamento, Bebida ou Sobremesa
 - **categoria:** (exemplos) Hamburguer, Pizza, Sushi, Bebida Quente/Fria... 
 
@@ -94,7 +95,7 @@ Proprietário(**idProprietário**,username,password,nome,idade,nif,telefone,emai
 
 Restaurante(**idRestaurante**,nome,morada,tipo,idProprietário->Proprietário)
 
-Prato(**idPrato**,nome,tipo, categoria,preço,promoção,estado)
+Prato(**idPrato**,nome, descrição, tipo, categoria,preço,promoção,estado)
 
 Pedido(**idPedido**,estado,comentário adicional, morada de entrega, data de submissão, hora de submissão)
 
