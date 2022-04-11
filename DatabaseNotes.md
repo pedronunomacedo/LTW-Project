@@ -4,7 +4,7 @@
 
 ### Utilizadores - Proprietários e Clientes
 
-É necessário criar uma base de dados para armazenar dados referentes a um site de entrega de comida, que serve como plataforma para vários restaurantes e estabelecimentos venderem os seus produtos alimentares. Os utilizadores registados no site podem ser **Clientes** ou **Proprietários de Restaurantes**. De **qualquer utilizador**, interessa saber o seu nome, a sua idade, o seu NIF, o seu username e password no site e um número de telefone. Cada utilizador tem um ID associado. Dos **Proprietários de Restaurantes** interessa registar um email.
+É necessário criar uma base de dados para armazenar dados referentes a um site de entrega de comida, que serve como plataforma para vários restaurantes e estabelecimentos venderem os seus produtos alimentares. Os utilizadores registados no site podem ser **Clientes** ou **Proprietários de Restaurantes**. De **qualquer utilizador**, interessa saber o seu nome, a sua idade, o seu NIF, o seu username e password no site, um número de telefone e um email. Cada utilizador tem um ID associado.
 
 
 #### Atributos de Utilizadores
@@ -17,7 +17,7 @@
 - **Idade**
 - **NIF**
 - **Telefone**
-- **Email:** Exclusivo de Proprietário
+- **Email**
 
 ### Moradas
 Cada Cliente pode registar 0 ou mais moradas que ficam listadas na sua conta para selecionar em qualquer pedido que faça.
