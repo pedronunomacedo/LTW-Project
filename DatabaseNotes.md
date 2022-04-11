@@ -105,8 +105,6 @@ Horário(**idHorário**,abertura,encerramento)
 
 RestauranteHorário(**idRestaurante**->Restaurante, **idHorário**->Horário)
 
-ClientePedidoReview(**idPedido**->Pedido, idCliente->Cliente, null?, título, comentário, hora de submissão, data de submissão, avaliação, resposta)
-
-ClientePedidoFavorito(**idPedido**->Pedido, idCliente->Cliente, restaurante?, prato?, pedido?)
+ClientePedido(**idPedido**->Pedido, idCliente->Cliente, null?, título, comentário, hora de submissão, data de submissão, avaliação, resposta, restaurante?, prato?, pedido?)
 
 **Nota:** Todas as relações estão na Forma Normal de Boyce-Codd.
