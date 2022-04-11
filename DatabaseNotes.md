@@ -86,7 +86,9 @@ Um Cliente pode definir zero ou mais Restaurantes como favoritos.
 
 ## UML --> Relações
 
-Cliente(**idCliente**,username,password,nome,idade,nif,telefone,morada)
+Cliente(**idCliente**,username,password,nome,idade,nif,telefone)
+
+Morada(**idMorada**, nome, idCliente->Cliente)
 
 Proprietário(**idProprietário**,username,password,nome,idade,nif,telefone,email)
 
