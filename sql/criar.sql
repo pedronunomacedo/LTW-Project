@@ -34,12 +34,13 @@ CREATE TABLE Proprietario(
 CREATE TABLE Morada(
   idMorada integer primary key,
   nome varchar(50)
+  client references Cliente
 );
 
 CREATE TABLE Restaurante(
   idRestaurante integer primary key,
   nome varchar(30) unique not null,
-  morada varchar(50) unique not null,
+  morada integer unique not null,
   tipo varchar(30) not null
 );
 
