@@ -11,7 +11,7 @@ VALUES
   (8,"Eleanor Durham","non","Basil Mcmahon",87,"374645444","478614175","turpis@hotmail.couk"),
   (9,"Ignacia Adkins","eros","Kai Steele",44,"375427668","736499488","fermentum@protonmail.couk"),
   (10,"Emerald Hopper","Aliquam","Candace Parks",67,"832437898","345281647","fringilla.cursus@outlook.org");
-INSERT INTO `Cliente` (`idCliente`,`username`,`pass`,`nome`,`idade`,`nif`,`telefone`,`email`)
+/*INSERT INTO `Cliente` (`idCliente`,`username`,`pass`,`nome`,`idade`,`nif`,`telefone`,`email`)
 VALUES
   (11,"Ebony Velasquez","amet,","Hu Walsh",79,"346324544","796843236","vivamus.sit.amet@aol.ca"),
   (12,"Troy Kidd","interdum","Illiana Thomas",31,"957375835","237889384","adipiscing.ligula@outlook.edu"),
@@ -119,7 +119,7 @@ VALUES
   (98,"Jenette Gay","Curabitur","Brenna Moon",68,"776424433","237825387","egestas.ligula@hotmail.ca"),
   (99,"Carl Love","Nunc","Christian Dorsey",56,"883489633","631878824","aenean.euismod@icloud.ca"),
   (100,"Sybil Hatfield","tempor","Ulysses Cherry",37,"731769176","457547826","bibendum.ullamcorper@protonmail.ca");
-
+*/
 
 
 /*50 Proprietários Gerados Aleatoriamente-----------------------------------------------------------------------------------------------------------------------*/
@@ -135,7 +135,7 @@ VALUES
   (8,"Hollee Castro","rhoncus","Barrett Garrett",44,"548485639","552755454","orci@yahoo.ca"),
   (9,"Jonah Montoya","dui","Giselle Ross",78,"317255223","651855435","ultrices.duis@aol.couk"),
   (10,"Demetria Michael","Donec","Aladdin Acevedo",46,"946871337","498264172","ullamcorper.duis.cursus@aol.org");
-INSERT INTO `Proprietario` (`idProprietario`,`username`,`pass`,`nome`,`idade`,`nif`,`telefone`,`email`)
+/*INSERT INTO `Proprietario` (`idProprietario`,`username`,`pass`,`nome`,`idade`,`nif`,`telefone`,`email`)
 VALUES
   (11,"Britanney Garcia","vitae,","Hu Arnold",97,"635636848","982277647","arcu.ac@icloud.org"),
   (12,"Hedy Jenkins","semper","Cathleen Zamora",39,"183512978","374447532","donec@icloud.net"),
@@ -182,7 +182,7 @@ VALUES
   (47,"Aspen Kane","sit","Barry Albert",75,"283156729","832923487","erat@outlook.net"),
   (48,"Lane Mcclure","Nunc","Uma Hurst",44,"248431284","677559198","ridiculus@outlook.couk"),
   (49,"Elizabeth Cummings","Aenean","Alvin Dickson",78,"431318387","683212546","dictum.eu@yahoo.couk"),
-  (50,"Georgia Francis","amet,","Kelsie Farmer",81,"432179299","357951368","erat@outlook.ca");
+  (50,"Georgia Francis","amet,","Kelsie Farmer",81,"432179299","357951368","erat@outlook.ca");*/
 
 
 /* 200 Moradas */
@@ -198,7 +198,7 @@ VALUES
   (8,"Ap #869-1611 Proin St."),
   (9,"525-3559 Eget St."),
   (10,"Ap #482-5667 Pellentesque Rd.");
-INSERT INTO `Morada` (`idMorada`,`nome`)
+/*INSERT INTO `Morada` (`idMorada`,`nome`)
 VALUES
   (11,"846-5789 Ac Rd."),
   (12,"P.O. Box 774, 4925 Velit. Rd."),
@@ -425,8 +425,9 @@ VALUES
   (197,"7076 Augue Rd."),
   (198,"Ap #392-7988 Fringilla. Ave"),
   (199,"P.O. Box 952, 9232 Egestas Road"),
-  (200,"Ap #578-1859 A, Street");
-
+  (200,"Ap #578-1859 A, Street");*/
+  
+  
 
 /*50 Restaurantes Gerados Aleatoriamente--------------------------------*/
 INSERT INTO `Restaurante` (`idRestaurante`,`nome`,`morada`,`tipo`)
@@ -441,7 +442,7 @@ VALUES
   (8,"Nome","363-3617 Pellentesque Rd.","Tipo"),
   (9,"Nome","663-7670 Proin Avenue","Tipo"),
   (10,"Nome","728-6809 Purus St.","Tipo");
-INSERT INTO `Restaurante` (`idRestaurante`,`nome`,`morada`,`tipo`)
+/*INSERT INTO `Restaurante` (`idRestaurante`,`nome`,`morada`,`tipo`)
 VALUES
   (11,"Nome","204-2616 Sed Av.","Tipo"),
   (12,"Nome","5468 Ligula. Ave","Tipo"),
@@ -488,7 +489,7 @@ VALUES
   (47,"Nome","548-9347 Ultrices, Av.","Tipo"),
   (48,"Nome","P.O. Box 535, 6074 Eu, St.","Tipo"),
   (49,"Nome","P.O. Box 141, 1325 Sollicitudin St.","Tipo"),
-  (50,"Nome","P.O. Box 431, 5979 Interdum. Street","Tipo");
+  (50,"Nome","P.O. Box 431, 5979 Interdum. Street","Tipo");*/
 
 
 
@@ -505,7 +506,7 @@ VALUES
   (8,"Nome","descricao","Tipo","categoria"),
   (9,"Nome","descricao","Tipo","categoria"),
   (10,"Nome","descricao","Tipo","categoria");
-INSERT INTO `Prato` (`idPrato`,`nome`,`descricao`,`tipo`,`categoria`)
+/*INSERT INTO `Prato` (`idPrato`,`nome`,`descricao`,`tipo`,`categoria`)
 VALUES
   (11,"Nome","descricao","Tipo","categoria"),
   (12,"Nome","descricao","Tipo","categoria"),
@@ -613,7 +614,7 @@ VALUES
   (98,"Nome","descricao","Tipo","categoria"),
   (99,"Nome","descricao","Tipo","categoria"),
   (100,"Nome","descricao","Tipo","categoria");
-
+*/
 
 
 /*Pedido ----------------------------------------------------------------*/
