@@ -1,3 +1,4 @@
+/*100 Clientes Gerados Aleatoriamente-----------------------------------------------------------------------------------------------------------------------*/
 INSERT INTO `Cliente` (`idCliente`,`username`,`pass`,`nome`,`idade`,`nif`,`telefone`,`email`)
 VALUES
   (1,"Denton Pitts","magna.","Adam Daniels",61,"368678646","253155522","sit.amet@icloud.net"),
