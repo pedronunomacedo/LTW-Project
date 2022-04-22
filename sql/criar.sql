@@ -62,9 +62,9 @@ CREATE TABLE Pedido(
 );
 
 CREATE TABLE RestaurantePedidoPrato(
-  restaurante references Restaurante,
+  restaurante references Restaurante not null,
   pedido references Pedido,
-  prato references Prato
+  prato references Prato not null
 );
 
 CREATE TABLE Horario(
