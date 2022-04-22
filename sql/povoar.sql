@@ -858,6 +858,735 @@ VALUES
   (199,"estado","comentario","P.O. Box 254, 7816 Dapibus Rd.","2022-6-7"),
   (200,"estado","comentario","P.O. Box 850, 9110 Fermentum Rd.","2022-9-18");
 
+/* 100 Relações RestaurantePedidoPrato */
+
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (11,127,45),
+  (22,5,77),
+  (22,92,80),
+  (39,71,35),
+  (5,172,41),
+  (31,157,16),
+  (6,79,33),
+  (13,10,16),
+  (7,195,12),
+  (30,126,15);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (13,22,94),
+  (7,154,56),
+  (42,66,41),
+  (4,11,44),
+  (9,77,49),
+  (48,148,67),
+  (18,116,31),
+  (21,115,94),
+  (41,41,70),
+  (5,97,28);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (27,136,34),
+  (17,183,96),
+  (20,115,30),
+  (46,138,44),
+  (17,195,17),
+  (35,142,52),
+  (25,122,66),
+  (14,97,31),
+  (20,47,41),
+  (29,77,17);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (12,50,34),
+  (48,135,47),
+  (28,122,39),
+  (14,27,19),
+  (6,115,95),
+  (38,89,67),
+  (31,34,65),
+  (31,150,98),
+  (36,166,31),
+  (24,137,17);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (45,1,17),
+  (41,113,26),
+  (36,175,33),
+  (26,2,3),
+  (4,26,58),
+  (41,105,34),
+  (42,101,5),
+  (42,12,11),
+  (6,118,41),
+  (31,22,11);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (44,138,89),
+  (12,142,2),
+  (4,172,50),
+  (37,104,95),
+  (22,81,99),
+  (41,189,98),
+  (11,93,56),
+  (20,19,22),
+  (47,22,50),
+  (44,190,44);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (44,107,39),
+  (20,74,70),
+  (42,14,19),
+  (19,177,17),
+  (49,63,20),
+  (49,123,8),
+  (19,110,66),
+  (28,77,75),
+  (29,88,52),
+  (32,111,23);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (11,156,17),
+  (50,102,23),
+  (19,151,96),
+  (49,21,77),
+  (11,128,63),
+  (43,160,35),
+  (9,91,19),
+  (2,60,47),
+  (30,103,65),
+  (47,126,47);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (38,96,79),
+  (36,156,18),
+  (16,134,4),
+  (30,113,55),
+  (30,151,54),
+  (5,19,88),
+  (44,48,71),
+  (5,135,27),
+  (15,65,35),
+  (47,147,14);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (31,101,33),
+  (23,40,59),
+  (37,157,34),
+  (8,162,47),
+  (36,31,15),
+  (38,113,97),
+  (46,115,27),
+  (27,50,100),
+  (36,197,52),
+  (23,75,99);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (27,104,96),
+  (30,129,28),
+  (39,47,90),
+  (42,85,23),
+  (14,44,81),
+  (19,43,22),
+  (35,141,39),
+  (46,65,19),
+  (16,91,60),
+  (42,83,17);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (19,118,38),
+  (13,70,48),
+  (42,62,60),
+  (15,131,78),
+  (31,100,28),
+  (7,178,62),
+  (22,116,62),
+  (46,50,39),
+  (26,48,72),
+  (4,27,83);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (39,93,86),
+  (7,27,66),
+  (33,134,8),
+  (39,157,76),
+  (23,116,73),
+  (50,69,28),
+  (3,84,97),
+  (5,108,4),
+  (21,147,95),
+  (22,1,56);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (33,54,3),
+  (11,185,66),
+  (47,27,56),
+  (43,172,70),
+  (26,90,11),
+  (24,57,80),
+  (10,198,29),
+  (11,172,17),
+  (22,182,33),
+  (25,88,27);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (4,67,55),
+  (39,23,15),
+  (50,127,14),
+  (34,145,92),
+  (2,96,51),
+  (16,4,38),
+  (33,166,19),
+  (32,109,28),
+  (44,53,72),
+  (41,124,17);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (50,8,14),
+  (42,44,17),
+  (13,88,87),
+  (49,37,26),
+  (49,36,75),
+  (23,83,57),
+  (22,13,29),
+  (32,127,15),
+  (4,58,58),
+  (15,170,29);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (18,85,20),
+  (20,182,22),
+  (12,145,31),
+  (42,13,25),
+  (19,83,97),
+  (22,119,80),
+  (13,97,9),
+  (14,60,24),
+  (46,7,16),
+  (23,58,81);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (49,64,35),
+  (33,164,12),
+  (21,32,76),
+  (30,183,84),
+  (25,174,32),
+  (25,151,63),
+  (33,127,48),
+  (16,6,89),
+  (17,138,86),
+  (37,144,77);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (17,6,20),
+  (25,83,71),
+  (12,106,37),
+  (14,5,50),
+  (11,116,32),
+  (17,77,56),
+  (38,199,83),
+  (18,185,31),
+  (16,114,66),
+  (16,9,69);
+INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+VALUES
+  (15,31,26),
+  (33,66,89),
+  (30,89,61),
+  (4,42,69),
+  (17,155,10),
+  (46,119,64),
+  (5,63,31),
+  (13,146,35),
+  (48,73,21),
+  (10,39,88);
 
 
 
+/* 50 Horários ---------------------------------------------------------------------------------------*/
+INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+VALUES
+  (1,"7:24 AM","11:12 PM"),
+  (2,"11:17 AM","6:15 PM"),
+  (3,"5:48 AM","12:46 PM"),
+  (4,"7:07 AM","7:39 PM"),
+  (5,"6:20 AM","6:23 PM"),
+  (6,"12:29 AM","3:24 PM"),
+  (7,"12:53 AM","11:02 PM"),
+  (8,"4:08 AM","9:28 PM"),
+  (9,"6:28 AM","4:01 PM"),
+  (10,"5:47 AM","4:07 PM");
+INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+VALUES
+  (11,"2:19 AM","5:03 PM"),
+  (12,"10:41 AM","5:48 PM"),
+  (13,"1:26 AM","8:36 PM"),
+  (14,"1:10 AM","1:48 PM"),
+  (15,"2:50 AM","12:39 PM"),
+  (16,"4:25 AM","12:21 PM"),
+  (17,"9:48 AM","2:03 PM"),
+  (18,"3:37 AM","8:58 PM"),
+  (19,"3:15 AM","6:00 PM"),
+  (20,"7:00 AM","12:37 PM");
+INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+VALUES
+  (21,"6:12 AM","12:59 PM"),
+  (22,"5:54 AM","11:01 PM"),
+  (23,"1:25 AM","3:12 PM"),
+  (24,"12:21 AM","9:52 PM"),
+  (25,"11:44 AM","5:28 PM"),
+  (26,"2:54 AM","3:31 PM"),
+  (27,"9:07 AM","2:15 PM"),
+  (28,"7:09 AM","2:02 PM"),
+  (29,"5:48 AM","2:49 PM"),
+  (30,"12:04 AM","4:25 PM");
+INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+VALUES
+  (31,"9:51 AM","9:15 PM"),
+  (32,"4:46 AM","7:49 PM"),
+  (33,"11:48 AM","4:38 PM"),
+  (34,"12:45 AM","5:32 PM"),
+  (35,"5:08 AM","11:11 PM"),
+  (36,"9:28 AM","10:53 PM"),
+  (37,"10:18 AM","4:30 PM"),
+  (38,"8:58 AM","4:31 PM"),
+  (39,"8:48 AM","2:21 PM"),
+  (40,"5:01 AM","10:19 PM");
+INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+VALUES
+  (41,"1:11 AM","9:23 PM"),
+  (42,"10:36 AM","12:07 PM"),
+  (43,"12:43 AM","12:59 PM"),
+  (44,"1:38 AM","12:00 PM"),
+  (45,"3:18 AM","6:41 PM"),
+  (46,"11:21 AM","11:57 PM"),
+  (47,"7:54 AM","2:25 PM"),
+  (48,"5:26 AM","11:37 PM"),
+  (49,"4:29 AM","12:52 PM"),
+  (50,"9:07 AM","2:05 PM");
+
+
+
+/** 50 Relações RestauranteHorario **/
+INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+VALUES
+  (46,24),
+  (38,8),
+  (28,28),
+  (48,45),
+  (11,25),
+  (34,7),
+  (21,41),
+  (19,41),
+  (8,4),
+  (37,11);
+INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+VALUES
+  (23,5),
+  (46,10),
+  (29,8),
+  (34,31),
+  (44,3),
+  (34,5),
+  (10,40),
+  (46,18),
+  (49,12),
+  (3,27);
+INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+VALUES
+  (21,6),
+  (15,31),
+  (7,35),
+  (22,10),
+  (29,36),
+  (45,38),
+  (15,14),
+  (6,2),
+  (12,4),
+  (40,13);
+INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+VALUES
+  (10,30),
+  (24,29),
+  (4,22),
+  (26,29),
+  (8,39),
+  (13,9),
+  (2,13),
+  (39,37),
+  (35,6),
+  (44,35);
+INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+VALUES
+  (12,27),
+  (34,35),
+  (41,17),
+  (19,44),
+  (27,40),
+  (22,19),
+  (30,48),
+  (42,12),
+  (35,15),
+  (5,36);
+
+
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (24,166),
+  (35,23),
+  (25,82),
+  (27,32),
+  (45,83),
+  (6,63),
+  (78,125),
+  (83,149),
+  (53,58),
+  (57,136);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (74,14),
+  (55,103),
+  (77,30),
+  (76,181),
+  (99,80),
+  (42,188),
+  (9,89),
+  (18,147),
+  (40,64),
+  (38,170);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (29,171),
+  (75,86),
+  (51,50),
+  (96,51),
+  (60,109),
+  (8,50),
+  (15,31),
+  (6,108),
+  (67,73),
+  (63,91);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (48,180),
+  (10,125),
+  (59,37),
+  (58,3),
+  (14,154),
+  (95,180),
+  (67,158),
+  (14,28),
+  (49,67),
+  (13,159);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (51,195),
+  (84,198),
+  (78,111),
+  (86,152),
+  (62,110),
+  (99,8),
+  (65,163),
+  (50,184),
+  (28,163),
+  (67,156);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (2,49),
+  (65,44),
+  (100,26),
+  (23,156),
+  (55,79),
+  (81,25),
+  (74,109),
+  (5,149),
+  (57,19),
+  (74,38);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (91,190),
+  (57,35),
+  (61,65),
+  (65,45),
+  (61,104),
+  (97,12),
+  (6,22),
+  (8,10),
+  (84,88),
+  (71,66);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (36,136),
+  (85,110),
+  (64,182),
+  (65,154),
+  (57,10),
+  (67,184),
+  (9,5),
+  (75,169),
+  (91,197),
+  (66,153);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (19,92),
+  (24,186),
+  (35,182),
+  (80,88),
+  (26,146),
+  (99,162),
+  (36,187),
+  (73,155),
+  (60,75),
+  (20,109);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (67,18),
+  (72,122),
+  (9,24),
+  (55,29),
+  (37,167),
+  (9,140),
+  (18,169),
+  (26,179),
+  (90,159),
+  (62,179);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (98,169),
+  (63,9),
+  (95,126),
+  (90,154),
+  (71,169),
+  (70,167),
+  (60,51),
+  (50,192),
+  (26,137),
+  (80,128);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (41,59),
+  (66,7),
+  (42,112),
+  (38,5),
+  (27,76),
+  (52,145),
+  (61,61),
+  (45,177),
+  (52,189),
+  (14,120);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (37,102),
+  (57,177),
+  (66,164),
+  (73,139),
+  (66,187),
+  (63,44),
+  (21,168),
+  (34,149),
+  (87,88),
+  (68,26);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (100,153),
+  (55,50),
+  (78,134),
+  (67,14),
+  (34,167),
+  (67,162),
+  (30,124),
+  (83,128),
+  (80,28),
+  (60,51);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (63,173),
+  (12,105),
+  (60,76),
+  (43,50),
+  (19,18),
+  (65,66),
+  (13,178),
+  (52,44),
+  (73,74),
+  (80,147);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (35,87),
+  (6,95),
+  (17,44),
+  (29,129),
+  (35,143),
+  (12,135),
+  (17,179),
+  (69,10),
+  (38,31),
+  (28,95);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (89,78),
+  (48,186),
+  (25,72),
+  (89,182),
+  (29,89),
+  (38,121),
+  (71,31),
+  (29,56),
+  (58,65),
+  (5,64);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (2,152),
+  (63,106),
+  (15,186),
+  (81,194),
+  (11,47),
+  (49,149),
+  (63,17),
+  (50,32),
+  (39,100),
+  (13,28);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (31,149),
+  (46,100),
+  (21,47),
+  (90,97),
+  (85,58),
+  (76,76),
+  (85,89),
+  (6,77),
+  (96,134),
+  (96,107);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (53,112),
+  (81,166),
+  (36,45),
+  (84,10),
+  (100,87),
+  (82,138),
+  (91,183),
+  (93,52),
+  (45,188),
+  (77,70);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (38,106),
+  (68,199),
+  (91,119),
+  (65,126),
+  (70,105),
+  (73,53),
+  (93,177),
+  (54,191),
+  (39,149),
+  (63,11);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (81,83),
+  (32,143),
+  (78,59),
+  (88,133),
+  (9,44),
+  (30,25),
+  (31,137),
+  (28,3),
+  (68,39),
+  (39,76);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (54,195),
+  (89,131),
+  (19,94),
+  (33,91),
+  (40,71),
+  (50,2),
+  (63,61),
+  (12,184),
+  (93,110),
+  (67,138);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (58,50),
+  (15,40),
+  (73,113),
+  (53,177),
+  (79,98),
+  (13,131),
+  (99,52),
+  (12,130),
+  (53,195),
+  (74,86);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (23,186),
+  (12,132),
+  (12,10),
+  (88,169),
+  (64,55),
+  (26,13),
+  (21,53),
+  (46,74),
+  (52,141),
+  (97,5);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (39,167),
+  (94,179),
+  (60,80),
+  (92,35),
+  (72,177),
+  (16,9),
+  (26,79),
+  (11,94),
+  (32,14),
+  (91,7);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (34,151),
+  (28,142),
+  (65,193),
+  (46,147),
+  (57,179),
+  (70,154),
+  (8,108),
+  (96,200),
+  (16,144),
+  (37,153);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (53,158),
+  (70,100),
+  (50,192),
+  (16,26),
+  (37,178),
+  (55,144),
+  (41,128),
+  (49,185),
+  (93,74),
+  (83,6);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (46,50),
+  (67,129),
+  (50,26),
+  (1,30),
+  (83,96),
+  (57,175),
+  (61,138),
+  (1,3),
+  (20,162),
+  (39,50);
+INSERT INTO `ClientePedido` (`cliente`,`pedido`)
+VALUES
+  (86,190),
+  (12,67),
+  (92,41),
+  (51,174),
+  (68,150),
+  (10,137),
+  (84,49),
+  (93,172),
+  (61,79),
+  (79,160);
