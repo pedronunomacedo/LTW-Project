@@ -351,4 +351,25 @@ body > div.scrollmenu > div.scroll2 > a {
 
 body > div.scrollmenu > div.scroll2 > a:hover {
   background-color: rgb(238 238 238);
+  border-radius: .3125rem; /* Round edges */
+}
+
+body > #scrollmenu > #scroll2 {
+  align-items: center;
+}
+
+body > #scrollmenu > #scroll2 a:focus::after,
+body > #scrollmenu > #scroll2 a:hover::after {
+  opacity: 1;
+}
+
+body > #scrollmenu > #scroll2 a::after {
+  block-size: 100%;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+  inline-size: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s;
 }
