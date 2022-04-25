@@ -372,4 +372,9 @@ body > #scrollmenu > #scroll2 a::after {
   position: absolute;
   top: 0;
   transition: opacity 0.3s;
+  background-color: #04AA6D !important;
+}
+
+li a:hover:not(.active) {
+  background-color: #04AA6D !important;
 }
