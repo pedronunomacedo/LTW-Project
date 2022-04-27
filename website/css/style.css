@@ -378,3 +378,7 @@ body > #scrollmenu > #scroll2 a::after {
 li a:hover:not(.active) {
   background-color: #04AA6D !important;
 }
+
+.active {
+  background-color: silver;
+}
