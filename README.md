@@ -8,3 +8,32 @@
 
 
 ## Mockups
+
+## Info Site
+
+### Categorias
+#### Categorias de Pratos (Main Dishes) e Acompanhamentos (Side Dishes)
+- Soup
+- Hot-Dog
+- Burger
+- Pizza
+- Sandwich
+- Sushi
+- Fried
+- Vegetarian
+- Mexican
+- Portuguese
+#### Categorias de Sobremesa (Desserts)
+- Ice Cream
+- Savory Desserts
+- Sweet Desserts
+- Pastry
+#### Categorias de Bebida (Drinks)
+- Cold Drinks
+- Hot Drinks
+- Alcohol
+### Tipos de Comida
+- Main Dish
+- Dessert
+- Drink
+- Side Dish
