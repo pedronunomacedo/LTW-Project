@@ -12,28 +12,28 @@
 ## Info Site
 
 ### Categorias
-#### Categorias de Pratos e Acompanhamentos
-- Sopas
-- Cachorros Quentes
-- Hamburgueres
-- Pizzas
-- Sandes
+#### Categorias de Pratos (Dishes) e Acompanhamentos (Side Dishes)
+- Soup
+- Hot-Dog
+- Burger
+- Pizza
+- Sandwich
 - Sushi
-- Fritos
-- Vegetarianas
-- Tradicional Portuguesa
-- Mexicana
-#### Categorias de Sobremesa
-- Gelados
-- Salgados
-- Doces
-- Pastelaria
-#### Categorias de Bebida
-- Bebidas Frias
-- Bebidas Quentes
-- Bebidas Alcoólicas
+- Fried
+- Vegetarian
+- Mexican
+- Portuguese
+#### Categorias de Sobremesa (Desserts)
+- Ice Cream
+- Savory Desserts
+- Sweet Desserts
+- Pastry
+#### Categorias de Bebida (Drinks)
+- Cold Drinks
+- Hot Drinks
+- Alcohol
 ### Tipos de Comida
-- Prato
-- Sobremesa
-- Bebida
-- Acompanhamento
+- Dish
+- Dessert
+- Drink
+- Side Dish
