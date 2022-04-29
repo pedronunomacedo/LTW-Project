@@ -496,11 +496,11 @@ VALUES
 /*100 Pratos -------------------------------------------------------*/
 INSERT INTO `Prato` (`idPrato`,`nome`,`descricao`,`tipo`,`categoria`)
 VALUES
-  (1,"Nome","descricao","Tipo","categoria"),
-  (2,"Nome","descricao","Tipo","categoria"),
-  (3,"Nome","descricao","Tipo","categoria"),
-  (4,"Nome","descricao","Tipo","categoria"),
-  (5,"Nome","descricao","Tipo","categoria"),
+  (1,"Pepper's Pizza","Ingredients: Mozarella, Pepperoni, Tomato Sauce, Olives","Main Dish","Pizza"),
+  (2,"Cheeseburger","Ingredients: Cheese, Bread, Lettuce, Tomato, Pickles and 50g Cow Beef Steak","Main Dish","Burger"),
+  (3,"Meat Lover Burger","Bread, Two 100g Cow Beef Steaks, Cheese and Onion","Main Dish","Burger"),
+  (4,"Extra Cheese Pizza","Four types of cheese, tomato sauce and olives","Main Dish","Pizza"),
+  (5,"Seaside Sandwich","French Bread, Tuna Fish, Lettuce, Onion and Mayonnaise","Main Dish","Sandwich"),
   (6,"Nome","descricao","Tipo","categoria"),
   (7,"Nome","descricao","Tipo","categoria"),
   (8,"Nome","descricao","Tipo","categoria"),
