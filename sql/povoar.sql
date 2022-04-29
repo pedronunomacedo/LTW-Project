@@ -630,7 +630,7 @@ VALUES
   (8,"estado","comentario","Ap #306-2866 Dui. Av.","Feb 5, 2022","10:38 AM"),
   (9,"estado","comentario","P.O. Box 767, 2525 Parturient St.","Jan 9, 2022","6:28 AM"),
   (10,"estado","comentario","7186 Diam. Street","Dec 9, 2021","5:00 AM");
-INSERT INTO `Pedido` (`idPedido`,`estado`,`comentario`,`morada`,`dataSub`,`horaSub`)
+/*INSERT INTO `Pedido` (`idPedido`,`estado`,`comentario`,`morada`,`dataSub`,`horaSub`)
 VALUES
   (11,"estado","comentario","926-4802 Dolor. St.","Oct 27, 2021","12:50 PM"),
   (12,"estado","comentario","Ap #476-4027 Hendrerit Av.","Dec 18, 2021","1:43 PM"),
@@ -857,7 +857,7 @@ VALUES
   (197,"estado","comentario","9666 Dui Rd.","Jan 21, 2023","3:10 AM"),
   (198,"estado","comentario","201-6370 Velit. Ave","Aug 27, 2021","12:58 AM"),
   (199,"estado","comentario","1261 Convallis Av.","Mar 31, 2022","8:34 PM"),
-  (200,"estado","comentario","891 Enim. St.","Oct 11, 2022","2:01 AM");
+  (200,"estado","comentario","891 Enim. St.","Oct 11, 2022","2:01 AM");*/
 
 
 /* 100 Relações RestaurantePedidoPrato */
@@ -874,7 +874,7 @@ VALUES
   (13,10,16),
   (7,195,12),
   (30,126,15);
-INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
+/*INSERT INTO `RestaurantePedidoPrato` (`restaurante`,`pedido`,`prato`)
 VALUES
   (13,22,94),
   (7,154,56),
@@ -1102,7 +1102,7 @@ VALUES
   (13,146,35),
   (48,73,21),
   (10,39,88);
-
+*/
 
 
 /* 50 Horários ---------------------------------------------------------------------------------------*/
@@ -1118,7 +1118,7 @@ VALUES
   (8,"4:08 AM","9:28 PM"),
   (9,"6:28 AM","4:01 PM"),
   (10,"5:47 AM","4:07 PM");
-INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
+/*INSERT INTO `Horario` (`idHorario`,`abertura`,`encerramento`)
 VALUES
   (11,"2:19 AM","5:03 PM"),
   (12,"10:41 AM","5:48 PM"),
@@ -1166,7 +1166,7 @@ VALUES
   (48,"5:26 AM","11:37 PM"),
   (49,"4:29 AM","12:52 PM"),
   (50,"9:07 AM","2:05 PM");
-
+*/
 
 
 /** 50 Relações RestauranteHorario **/
@@ -1182,7 +1182,7 @@ VALUES
   (19,41),
   (8,4),
   (37,11);
-INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
+/*INSERT INTO `RestauranteHorario` (`restaurante`,`horario`)
 VALUES
   (23,5),
   (46,10),
@@ -1592,3 +1592,4 @@ VALUES
   (93,172),
   (61,79),
   (79,160);
+*/
