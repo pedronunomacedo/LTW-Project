@@ -8,3 +8,32 @@
 
 
 ## Mockups
+
+## Info Site
+
+### Categorias
+#### Categorias de Pratos e Acompanhamentos
+- Sopas
+- Cachorros Quentes
+- Hamburgueres
+- Pizzas
+- Sandes
+- Sushi
+- Fritos
+- Vegetarianas
+- Tradicional Portuguesa
+- Mexicana
+#### Categorias de Sobremesa
+- Gelados
+- Salgados
+- Doces
+- Pastelaria
+#### Categorias de Bebida
+- Bebidas Frias
+- Bebidas Quentes
+- Bebidas Alcoólicas
+### Tipos de Comida
+- Prato
+- Sobremesa
+- Bebida
+- Acompanhamento
