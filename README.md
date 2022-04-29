@@ -12,7 +12,7 @@
 ## Info Site
 
 ### Categorias
-#### Categorias de Pratos (Dishes) e Acompanhamentos (Side Dishes)
+#### Categorias de Pratos (Main Dishes) e Acompanhamentos (Side Dishes)
 - Soup
 - Hot-Dog
 - Burger
@@ -33,7 +33,7 @@
 - Hot Drinks
 - Alcohol
 ### Tipos de Comida
-- Dish
+- Main Dish
 - Dessert
 - Drink
 - Side Dish
