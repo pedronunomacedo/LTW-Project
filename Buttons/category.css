@@ -1,0 +1,50 @@
+#active {
+    color: greenyellow;
+}
+
+.main-header {
+    margin: auto;
+    text-align: center;
+}
+
+.main-header > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header > #main-image {
+    background-color: transparent;
+    margin-right: 3em;
+    width: 150px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.main-header > #category-title {
+    font-size: 60px;
+}
+
+#restaurants {
+    display: block;
+    text-align: left;
+}
+
+#list-restaurants {
+    text-align: center;
+    left: 0;
+}
+
+.restaurant {
+    display: inline-block;
+    padding: 1em;
+}
+
+.restaurant img {
+    width: 300px;
+    height: 200px;
+}
+
+.restaurant > figcaption {
+    text-align: center; /* Center the image (img) with the legend of the image (figcaption) */
+    font-size: 20px;
+}

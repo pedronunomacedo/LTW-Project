@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 2rem;
+}
+ 
+a {
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.blue {
+    background-color: #3498db;
+}
+
+button.green {
+    background-color: #2ecc71;
+}
+
+button.orange {
+    background-color: orangered;
+}
