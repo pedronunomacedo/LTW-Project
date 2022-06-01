@@ -8,7 +8,7 @@
 
 
 ## Mockups
-- [criar.sql](https://github.com/pedronunomacedo/LTW-Project/blob/main/Mock-ups.pdf)
+- [Mock-ups.pdf](https://github.com/pedronunomacedo/LTW-Project/blob/main/Mock-ups.pdf)
 
 ## Info Site
 
