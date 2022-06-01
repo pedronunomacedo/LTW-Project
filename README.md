@@ -8,6 +8,7 @@
 
 
 ## Mockups
+- [criar.sql](https://github.com/pedronunomacedo/LTW-Project/blob/main/sql/criar.sql)
 
 ## Info Site
 
