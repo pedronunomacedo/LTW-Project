@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../css/style.css">
 
   <meta name="theme-color" content="#fafafa">
+  <script src="../js/category.js"></script>
 </head>
 
 <body>
@@ -41,24 +42,24 @@
     <div class="scroll2">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="hamburguer.html">Burgers</a>
-      <a href="pizza.html">Pizza</a>
-      <a href="hot-dog.html">Hot-Dogs</a>
-      <a href="sandwich.html">Sandwiches</a>
-      <a href="sushi.html">Sushi</a>
-      <a href="soups.html">Soups</a>
-      <a href="fried.html">Fried Food</a>
-      <a href="vegetarian.html">Vegetarian</a>
-      <a href="mexican.html">Mexican</a>
-      <a class = "active", href="portuguese.html">Portuguese</a>
-      <a href="icecream.html">Ice Cream</a>
-      <a href="drinks.html">Drinks</a>
-      <a href="desserts.html">Desserts</a>
+      <a href="category.html?category=burgers" id = "burgers-anchor">Burgers</a>
+      <a href="category.html?category=pizza" id = "pizza-anchor">Pizza</a>
+      <a href="category.html?category=hot-dog" id = "hot-dog-anchor">Hot-Dogs</a>
+      <a href="category.html?category=sandwich" id = "sandwich-anchor">Sandwiches</a>
+      <a href="category.html?category=sushi"  id = "sushi-anchor">Sushi</a>
+      <a href="category.html?category=soups" id = "soups-anchor">Soups</a>
+      <a href="category.html?category=fried"  id = "fried-anchor">Fried Food</a>
+      <a href="category.html?category=vegetarian"  id = "vegetarian-anchor">Vegetarian</a>
+      <a href="category.html?category=mexican"  id = "mexican-anchor">Mexican</a>
+      <a href="category.html?category=portuguese"  id = "portuguese-anchor">Portuguese</a>
+      <a href="category.html?category=ice_cream"  id = "ice-cream-anchor">Ice Cream</a>
+      <a href="category.html?category=drinks"  id = "drinks-anchor">Drinks</a>
+      <a href="category.html?category=desserts"  id = "desserts-anchor">Desserts</a>
       <a href="contact.html">Contact Us</a>
       <div class="animation_scroll2"></div>
     </div>
   </div>
-  <h1>Traditional Portuguese Food</h1>
+  <h1 id = "category-title"></h1>
   <div class = "row">
     <div class = "column">
       <img src="../img/dish_placeholder.jpg">
@@ -160,5 +161,6 @@
       <h2>Restaurant 18</h2>
       <p>Description</p>
     </div>
+  </div>
 </body>
 </html>
