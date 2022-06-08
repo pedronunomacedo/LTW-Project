@@ -1,62 +1,54 @@
-DROP TABLE IF EXISTS Client;
-DROP TABLE IF EXISTS Proper;
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Restaurant;
 DROP TABLE IF EXISTS Pedido;
 DROP TABLE IF EXISTS Review;
-DROP TABLE IF EXISTS Restaurant;
 DROP TABLE IF EXISTS Plate;
+DROP TABLE IF EXISTS Addresses;
 
 /* CREATE TABLES */
 
-CREATE TABLE Client (
+CREATE TABLE User (
   id integer PRIMARY KEY AUTOINCREMENT,
+  profilePic varchar(225),
   username varchar(12) unique,
   password varchar(20) not null,
   name varchar(30) not null,
   age integer not null,
   nif integer not null unique,
   phone integer not null unique,
-  address varchar(30) not null unique
-);
-
-CREATE TABLE Proper (
-  id integer PRIMARY KEY AUTOINCREMENT,
-  username varchar(12) unique,
-  password varchar(20) not null,
-  name varchar(30) not null,
-  age integer not null,
-  nif integer not null unique,
-  phone integer not null unique,
-  email varchar(30) not null unique
+  address varchar(30) not null unique,
+  client integer
 );
 
 CREATE TABLE Restaurant (
   id integer PRIMARY KEY AUTOINCREMENT,
-  idOwner integer REFERENCES Owner(id),
+  idUser integer REFERENCES User(id),
   name varchar(255) not null,
   address varchar(255) not null,
   type varchar(255) not null
 );
 
 CREATE TABLE Pedido (
-  id integer primary key,
+  id integer primary key AUTOINCREMENT,
   idRestaurant references Restaurant(id),
-  idClient references Client(id),
+  idUser references User(id),
   state varchar(30) not null,
   delieverAddress varchar(50),
-  submissonDate date not null,
-  submissonHour time not null
+  submissonDate varchar(50) not null,
+  submissonHour integer not null
 );
 
 CREATE TABLE Review (
   id integer PRIMARY KEY AUTOINCREMENT,
-  idClient integer REFERENCES Client(id),
+  idClient integer REFERENCES User(id),
   idPedido integer REFERENCES Pedido(id),
   title varchar(255) not null,
   comment varchar(255) not null,
-  submissonDate date not null,
-  submissonHour date not null,
-  grade integer not null,
-  answer varchar(255)
+  submissonDate varchar(50) not null,
+  submissonHour varchar(50) not null,
+  grade decimal not null,
+  answer varchar(255),
+  idOwner integer REFERENCES User(id)
 );
 
 CREATE TABLE Plate (
@@ -67,35 +59,44 @@ CREATE TABLE Plate (
     price FLOAT(20) NOT NULL
 );
 
+CREATE TABLE Addresses(
+  id integer PRIMARY KEY AUTOINCREMENT,
+  idUser references User(id),
+  address varchar(255) not null
+);
+
+CREATE TABLE Favorites(
+  id integer PRIMARY KEY AUTOINCREMENT,
+  idUser references User(id),
+  idRestaurant references Restaurant(id)
+);
+
 /* Povoate */
 
-INSERT INTO Client ('username','password','name','age','nif','phone','address')
+INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client')
 VALUES
-  ("Denton Pitts","@v{6Tr(~Rj","Adam Daniels",61,"368678646","253155522","sit.amet@icloud.net"),
-  ("Aspen Walters","#8E=TC6+tC","Leslie Good",72,"374287783","475788663","amet.ultricies.sem@yahoo.org"),
-  ("Jameson Greene","-36Z?paU-(","Bevis Strickland",68,"349435624","285844459","nunc@icloud.edu"),
-  ("Ima Carpenter","YN9K.p'der","Liberty Guthrie",18,"316523367","138734173","erat@icloud.net"),
-  ("Gail Marks","(nT%_2t4M","Scott Gross",65,"654456174","415659578","sollicitudin.commodo@google.com"),
-  ("Ulysses Sweeney","MdL(}Y;2XN","Rhoda Summers",52,"558777981","788164464","ac@icloud.net"),
-  ("Barclay Fuller","^@9XZeyT$q","Chelsea Buck",16,"526666647","758831523","suspendisse.commodo@icloud.com"),
-  ("Eleanor Durham","vYdsq4y*3b","Basil Mcmahon",87,"374645444","478614175","turpis@hotmail.couk"),
-  ("Ignacia Adkins","v!X)Tz522","Kai Steele",44,"375427668","736499488","fermentum@protonmail.couk"),
-  ("Emerald Hopper","cQ)@UMr4Bv","Candace Parks",67,"832437898","345281647","fringilla.cursus@outlook.org");
+  ("DentonPitts", "../images/profilePic.png","@v{6Tr(~Rj","Denton Pitts",61,"368678646","253155521","sit.ametee@icloud.net",1),
+  ("AspenWalters", "../images/profilePic.png","#8E=TC6+tC","Aspen Walters",72,"374287783","475788662","amet.ultriciess.sem@yahoo.org",1),
+  ("JamesonGreene", "../images/profilePic.png","-36Z?paU-(","Jameson Greene",68,"349435629","285844453","nuncc@icloud.edu",1),
+  ("ImaCarpenter", "../images/profilePic.png","YN9K.p'der","Ima Carpenter",18,"316523367","138734174","eratt@icloud.net",1),
+  ("GailMarks", "../images/profilePic.png","nT%_2t4M","Gail Marks",65,"654456174","415659579","sollicitudinn.commodo@google.com",1),
+  ("UlyssesSweeney", "../images/profilePic.png","MdL}Y;2XN","Ulysses Sweeney",52,"558777981","788164465","acc@icloud.net",1),
+  ("BarclayFuller", "../images/profilePic.png","^@9XZeyT$q","Barclay Fuller",16,"526666647","758831526","suspendissee.commodo@icloud.com",1),
+  ("EleanorDurham", "../images/profilePic.png","vYdsq4y*3b","Eleanor Durham",87,"374645444","478614177","turpiss@hotmail.couk",1),
+  ("IgnaciaAdkins", "../images/profilePic.png","v!X)Tz522","Ignacia Adkins",44,"375427668","736499488","fermentumm@protonmail.couk",1),
+  ("EmeraldHopper", "../images/profilePic.png","cQ)@UMr4Bv","Emerald Hopper",67,"832437898","345281648","fringillaa.cursus@outlook.org",1),
+  ("DentonsSalt", "../images/profilePic.png","cDYh+@8Yw","Dentons Salt",61,"368678641","253155529","sit.amete@icloud.net",0),
+  ("AspensSmith", "../images/profilePic.png","aNB~3Xhp~B","Aspens Smith",72,"374287782","475788661","amet.ultricies.sem@yahoo.org",0),
+  ("JamesonsBlue", "../images/profilePic.png","Rt~E43Mf","Jamesons Blue",68,"349435623","285844452","nunc@icloud.edu",0),
+  ("SophiesCalenski", "../images/profilePic.png","nTjH;&(s8;","Sophies Calenski",18,"316523364","138734173","erat@icloud.net",0),
+  ("GailsHupkins", "../images/profilePic.png","K8/~(BvGhG","Gails Hupkins",65,"654456175","415659574","sollicitudin.commodo@google.com",0),
+  ("UlyssessSweeney", "../images/profilePic.png","{s9[pSZN%w","Ulyssess Sweeney",52,"558777986","788164464","ac@icloud.net",0),
+  ("BarclaysFuller", "../images/profilePic.png",".zk3&GR7!","Barclays Fuller",16,"526666648","758831529","suspendisse.commodo@icloud.com",0),
+  ("EleanorsDurham", "../images/profilePic.png","f.57d:w*PM","Eleanors Durham",87,"374645447","478614175","turpis@hotmail.couk",0),
+  ("IgnaciasAdkins", "../images/profilePic.png",">{xWwcNH8","Ignacias Adkins",44,"375427669","736499485","fermentum@protonmail.couk",0),
+  ("EmeraldsHopper", "../images/profilePic.png","8G@qQDhpn","Emeralds Hopper",67,"832437891","345281649","fringilla.cursus@outlook.org",0);
 
-INSERT INTO Proper ('username','password','name','age','nif','phone','email')
-VALUES
-  ("Denton Pitts","cDYh+@8Yw","Adam Daniels",61,"368678646","253155522","sit.amet@icloud.net"),
-  ("Aspen Walters","aNB~3Xhp~B","Leslie Good",72,"374287783","475788663","amet.ultricies.sem@yahoo.org"),
-  ("Jameson Greene","Rt~E43Mf","Bevis Strickland",68,"349435624","285844459","nunc@icloud.edu"),
-  ("Ima Carpenter","nTjH;&(s8;","Liberty Guthrie",18,"316523367","138734173","erat@icloud.net"),
-  ("Gail Marks","K8/~(BvGhG","Scott Gross",65,"654456174","415659578","sollicitudin.commodo@google.com"),
-  ("Ulysses Sweeney","{s9[pSZN%w","Rhoda Summers",52,"558777981","788164464","ac@icloud.net"),
-  ("Barclay Fuller",".zk3&GR7!","Chelsea Buck",16,"526666647","758831523","suspendisse.commodo@icloud.com"),
-  ("Eleanor Durham","f.57d:w*PM","Basil Mcmahon",87,"374645444","478614175","turpis@hotmail.couk"),
-  ("Ignacia Adkins",">{xWwcNH8","Kai Steele",44,"375427668","736499488","fermentum@protonmail.couk"),
-  ("Emerald Hopper","8G@qQDhpn","Candace Parks",67,"832437898","345281647","fringilla.cursus@outlook.org");
-
-INSERT INTO Pedido ('idRestaurant', 'idClient', 'state', 'delieverAddress', 'submissonDate','submissonHour')
+INSERT INTO Pedido ('idRestaurant', 'idUser', 'state', 'delieverAddress', 'submissonDate','submissonHour')
 VALUES
   (1, 10, "delievered", "619-2904 Enim. Street","Dec 20, 2021","11:08 PM"),
   (1, 9, "on his way", "Ap #251-9626 In Avenue","Jul 10, 2022","12:35 AM"),
@@ -108,21 +109,21 @@ VALUES
   (8, 3, "ready", "P.O. Box 767, 2525 Parturient St.","Jan 9, 2022","6:28 AM"),
   (9, 1, "delievered", "7186 Diam. Street","Dec 9, 2021","5:00 AM");
 
-INSERT INTO Review ('idClient', 'idPedido', 'title', 'comment', 'submissonDate', 'submissonHour','grade', 'answer')
+INSERT INTO Review ('idClient', 'idPedido', 'title', 'comment', 'submissonDate', 'submissonHour', 'grade', 'answer', 'idOwner')
 VALUES
-  (1, 9, "Comida","Comida muito boa!","Oct 27, 2021","12:50 PM", 5, "Obrigado pela sua presença!"),
-  (2, 3, "Comida muito salgada","Achei a minha pizza muito salgada.","Oct 26, 2021","13:24 PM", 3.5, "Obrigado pela sua opinião. Iremos fazer melhor da próxima vez!"),
-  (3, 9, "Ótima comida","Têm de provar as pizzas, são divinais!","Sept 13, 2021","12:30 PM", 4.4, null),
-  (4, 5, "Um pouco seco","Achei o pão um pouco seco. Poderia ser do calor que fazia no dia em que fui!","Dec 26, 2021","14:00 PM", 4, null),
-  (4, 5, "Não há igual","Uma das melhores comidas que poderia haver!","Feb 06, 2021","13:00 PM", 5, null),
-  (6, 7, "Massa","Experimentem a massa a carbonara. Não se iram arrepender!","Oct 27, 2021","12:50 PM", 4.2, null),
-  (7, 8, "Bebidas","Achei que as bebidas pdoeriam estar um pouco mais frescas. Ainda por cima nos dias quentes de verão!","Jul 11, 2021","13:32 PM", 3, null),
-  (8, 6, "Arroz de tamboril","Poderiam ter servido mais arroz!","Jun 23, 2021","12:59 PM", 3.5, null),
-  (9, 10, "Mousse de chocolate","Uma das melhores que já provei! As pitadas de sal dão um toque especial.", "Aug 23, 2021","14:37 PM", 4.2, null),
-  (10, 1, "Peixe","Muito bom!","Apr 09, 2021","13:17 PM", 3.9, null);
+  (1, 9, "Comida","Comida muito boa!","Oct 27, 2021","12:50 PM", 5, "Obrigado pela sua presença!", 10),
+  (2, 3, "Comida muito salgada","Achei a minha pizza muito salgada.","Oct 26, 2021","13:24 PM", 3.5, "Obrigado pela sua opinião. Iremos fazer melhor da próxima vez!", 11),
+  (3, 9, "Ótima comida","Têm de provar as pizzas, são divinais!","Sept 13, 2021","12:30 PM", 4.4, null, 12),
+  (4, 5, "Um pouco seco","Achei o pão um pouco seco. Poderia ser do calor que fazia no dia em que fui!","Dec 26, 2021","14:00 PM", 4, null, 13),
+  (5, 5, "Não há igual","Uma das melhores comidas que poderia haver!","Feb 06, 2021","13:00 PM", 5, null, 14),
+  (6, 7, "Massa","Experimentem a massa a carbonara. Não se iram arrepender!","Oct 27, 2021","12:50 PM", 4.2, null, 15),
+  (7, 8, "Bebidas","Achei que as bebidas pdoeriam estar um pouco mais frescas. Ainda por cima nos dias quentes de verão!","Jul 11, 2021","13:32 PM", 3, null, 16),
+  (8, 6, "Arroz de tamboril","Poderiam ter servido mais arroz!","Jun 23, 2021","12:59 PM", 3.5, null, 17),
+  (9, 10, "Mousse de chocolate","Uma das melhores que já provei! As pitadas de sal dão um toque especial.", "Aug 23, 2021","14:37 PM", 4.2, null, 18),
+  (10, 1, "Peixe","Muito bom!","Apr 09, 2021","13:17 PM", 3.9, null, 19);
 
 
-INSERT INTO Restaurant ('idOwner', 'name', 'address', 'type')
+INSERT INTO Restaurant ('idUser', 'name', 'address', 'type')
 VALUES
   (1,"MCDonalds","197-1124 Elementum, Rd.","burgers"),
   (2,"Burguer King","850-2661 Interdum. St.","burgers"),
@@ -148,3 +149,29 @@ VALUES
   (9, "Feijoada", "extras", 0.99),
   (10, "Francesinha", "extras", 2.15),
   (8, "Sushi", "sushi", 8.99);
+
+INSERT INTO Addresses ('idUser', 'address')
+VALUES
+  (1, "Ap #969-6396 Donec Rd."),
+  (4, "Ap #241-8356 Egestas Rd."),
+  (7, "P.O. Box 398, 361 Proin Avenue"),
+  (4, "P.O. Box 638, 5727 Curae St."),
+  (1, "P.O. Box 193, 8009 Sagittis Avenue"),
+  (2, "Ap #474-2691 Ut St."),
+  (10, "6003 Est. Rd."),
+  (10, "Ap #869-1611 Proin St."),
+  (9, "525-3559 Eget St."),
+  (6, "Ap #482-5667 Pellentesque Rd.");
+
+INSERT INTO Favorites ('idUser', 'idRestaurant')
+VALUES
+  (1, 2),
+  (1, 3),
+  (2, 3),
+  (2, 9),
+  (9, 7),
+  (3, 7),
+  (10, 9),
+  (10, 6),
+  (9, 4),
+  (6, 4);

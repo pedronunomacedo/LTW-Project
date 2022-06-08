@@ -99,6 +99,11 @@ CREATE TABLE Review(
   resposta char
 );
 
+CREATE TABLE ADDRESSES(
+  idCliente references Cliente(idCliente),
+  address varchar(255) not null
+);
+
 /* Povoar */
 
 /*100 Clientes Gerados Aleatoriamente-----------------------------------------------------------------------------------------------------------------------*/

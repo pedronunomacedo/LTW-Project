@@ -4,9 +4,15 @@
     require_once('../templates/plate.tpl.php');
 ?>
 
-<?php function drawRestaurant(Restaurant $restaurant, array $plates) { ?>
+<?php function drawRestaurant(PDO $db, Restaurant $restaurant, array $plates) {
+    $restaurantGrade = Restaurant::getRestaurantGrade($db, intval($restaurant->id));
+    $numClassifications = Restaurant::getNumberClassifications($db, intval($restaurant->id))
+    ?>
     <img src="../images/restaurantImg.png">
-    <h2><?=$restaurant->name?> <a href="../pages/comments.php?id=<?php echo $restaurant->id?>">More informations</a></h2>
+    <h2><?=$restaurant->name?></h2>
+    <div class="restaurant-info">
+        <h4><?=$restaurantGrade?> (<?=$numClassifications?> classifications) <a href="../pages/comments.php?id=<?php echo $restaurant->id?>">More informations</a></h4s>
+    </div>
 
     <section class="main-titles">
         <h2>Plates</h3>
@@ -144,8 +150,16 @@
 <?php } ?>
 
 <?php function restaurantDiv(Restaurant $restaurant) { ?>
-    <section>
-        
+    <section class="restaurant-div">
+        <img src="../images/restaurantImg.png">
+        <p><?=$restaurant->name?></p>
     </section>
-
 <?php } ?>
+
+<?php function drawFavoriteRestaurant(Restaurant $restaurant, float $restaurantGrade) { ?>
+    <section class="favorite-restaurant">
+        <img src="../images/restaurantImg.png">
+        <p><?=$restaurant->name?></p>
+        <p><?=$restaurantGrade?></p>
+    </section>
+<?php }?>

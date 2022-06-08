@@ -31,6 +31,25 @@
             );
         }
 
+        static function getAllPlates(PDO $db) : array {
+            $stmt = $db->prepare('SELECT * FROM Plate');
+            $stmt->execute();
+
+            $allPlates = array();
+
+            while ($plate = $stmt->fetch()) {
+                $allPlates[] = new Plate(
+                    $plate['id'],
+                    $plate['idRestaurant'],
+                    $plate['name'],
+                    $plate['category'],
+                    $plate['price']
+                );
+            }
+            
+            return $allPlates;
+        }
+
         static function getRestaurantPlates(PDO $db, int $id) : array {
             $stmt = $db->prepare('SELECT * FROM Plate WHERE idRestaurant = ?');
             $stmt->execute(array($id));
@@ -48,6 +67,25 @@
             }
             
             return $plates;
+        }
+
+        static function getCategoryPlates(PDO $db, $category) {
+            $stmt = $db->prepare('SELECT * FROM Plate WHERE category = ?');
+            $stmt->execute(array($category));
+            
+            $categoryPlates = array();
+
+            while ($plate = $stmt->fetch()) {
+                $categoryPlates[] = new Plate(
+                    $plate['id'],
+                    $plate['idRestaurant'],
+                    $plate['name'],
+                    $plate['category'],
+                    $plate['price']
+                );
+            }
+            
+            return $categoryPlates;
         }
     }
 ?>

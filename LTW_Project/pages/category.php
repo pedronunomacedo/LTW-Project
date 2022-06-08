@@ -9,7 +9,7 @@
 
   $category = $_GET['category'];
 
-  $categoryeRestaurants = Restaurant::getCategoryRestaurants($db, $category);
-
-  drawCategoryRestaurants($db, $categoryeRestaurants, $category);
+  $categoryRestaurants = Restaurant::getCategoryRestaurants($db, $category);
+  
+  drawCategoryRestaurants($db, $categoryRestaurants, $category);
 ?>
