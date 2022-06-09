@@ -13,6 +13,8 @@
 
     $db = getDatabaseConnection();
 ?>
+    <link rel="stylesheet" href="../css/common.css"> <!-- Style of the header and the footer -->
+    
     <section class="best-burgers">
         <h1>The most popular Hamburguer options</h1>
         <a href="category.php?category=burger">See all</a>

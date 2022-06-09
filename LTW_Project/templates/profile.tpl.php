@@ -43,7 +43,9 @@
                 <p>Phone: <input type="text" placeholder="phone"></p>
             </form>
             <button type="button" class="btn-save-changes">Save changes</button>
-            <button type="button" class="btn-end-session">Log out</button>
+            <form action="../actions/action_logout.php" method="post" class="logout">
+                <button type="submit">Logout</button>
+            </form>
         </div>
     </div>
     <div class="my-addresses-section">

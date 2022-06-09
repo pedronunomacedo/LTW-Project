@@ -42,8 +42,7 @@
                 $restaurant['idUser'],
                 $restaurant['name'],
                 $restaurant['address'],
-                $restaurant['type'],
-                $restaurant['favorite']
+                $restaurant['type']
                 );
             }
 
@@ -64,8 +63,7 @@
                     $restaurant['idUser'],
                     $restaurant['name'],
                     $restaurant['address'],
-                    $restaurant['type'],
-                    $restaurant['favorite']
+                    $restaurant['type']
                 );
             }
 

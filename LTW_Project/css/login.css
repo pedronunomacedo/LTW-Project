@@ -1,0 +1,347 @@
+body {
+    background-color: #f3f3f3;
+    font-family: Bahnschrift, serif;
+}
+
+.hd-ttl {
+    font-size: 50px;
+    color: white;
+    text-decoration-color: white;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: white;
+    margin-block: 3em;
+    margin-inline: 15rem;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.auth {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-bottom: 1px solid #cccccc;
+    margin-inline: 1em;
+}
+
+.both {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.cntr {
+    margin-inline: auto;
+    position: relative;
+    width: 40%;
+}
+
+.h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #888888;
+}
+
+.d-block {
+    display: block;
+}
+
+.rel {
+    position: relative;
+    max-width: 100%;
+}
+
+.lg {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.lighter {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+
+.form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-control.is-invalid, .was-validated:invalid, .form-control:invalid {
+    border-color: #d92554;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-position: 98%;
+    background-repeat: no-repeat;
+}
+
+#password2 {
+    background-image: none;
+}
+
+.form-control.is-valid, .was-validated .form-control:valid {
+    background-position: calc(-15px + 100%) 50%;
+    background-size: 12px;
+    border-color: #00a520;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+}
+
+input.form-control, select.form-control {
+    height: 38px;
+}
+
+.form-control {
+    font-weight: normal;
+    border-radius: 5px!important;
+    border-color: #999999;
+    padding: 13px 15px 0;
+    font-size: 12px;
+    transition: background-color .2s ease-in-out;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    background-clip: padding-box;
+}
+
+.form-control-filled, .form-control:focus {
+    box-shadow: none;
+    border-color: #b9b9b9;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+}
+
+.form-control.form-control-filled + .form-control-label {
+    top: 8px;
+    font-size: 10px;
+    color: #B2B2B2;
+}
+
+.form-control-label {
+    pointer-events: none;
+    line-height: 1;
+    margin-bottom: 0;
+    padding-left: 0;
+    position: absolute;
+    left: 15px;
+    background-color: transparent!important;
+    transition: top .2s ease-in-out;
+    padding-right: 4px;
+}
+
+label {
+    display: inline-block;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor:pointer;
+}
+
+.btn-lg {
+    line-height: 1.2!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    height: 45px!important;
+}
+
+.btn-primary {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all .2s ease 0.05s;
+    margin-bottom: 1rem!important;
+    margin-top: 0.5rem!important;
+    width: 100%!important;
+    vertical-align: middle;
+    overflow: visible;
+}
+
+.btn-primary, .btn-secondary {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.new-text {
+    padding-block: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -15px;
+}
+
+.column {
+    margin-inline: auto!important;
+    position: relative;
+    width: 100%;
+    padding-inline: 15px;
+}
+
+.column h2 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center!important;
+    margin-bottom: 1.5rem!important;
+    color: #555;
+    line-height: 1.2;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 0.5rem !important;
+    padding-left: 0;
+    display: list-item;
+}
+
+.check {
+    font-weight: 900;
+    margin-right: 1rem!important;
+}
+
+.check:before {
+    content: ' \2714'
+}
+
+input:required + label:after {
+    content: " *"
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.info-text {
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+
+small {
+    color: #9da5ac !important;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.prvc-text {
+    padding-top: 2px;
+    padding-left: 2px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.alert-danger {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #eb6578 30px, #eaaab3 0);
+    color: #721c24;
+}
+
+.alert {
+    border-radius: 0;
+    position: relative;
+    line-height: 15px;
+    font-size: 12px;
+    border: 0;
+    margin-bottom: 1rem!important;
+    padding: 0.75rem 1.25rem;
+    padding-left: 40px;
+}
+
+.alert:before {
+    content: '\2613';
+    font-weight: 500;
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    color: #fff;
+}
+
+.ft {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-txt > a {
+    padding-inline: 2em;
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.ft-txt > a:hover {
+    text-decoration: underline;
+}
+
+.ft-txt {
+    padding-block: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.back-top {
+    position: absolute;
+    right: 40px;
+    text-transform: uppercase;
+}
+
+.back-top > a {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.back-top > a:hover {
+    text-decoration: underline;
+}
+
+#after1, #after2, #after3, #after4 {
+    display: none;
+}

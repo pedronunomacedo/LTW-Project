@@ -1,0 +1,45 @@
+body {
+    background-color: #f3f3f3;
+    font-family: Bahnschrift, serif;
+}
+
+body > header {
+    background-color: rgb(141 197 235);
+    color: black;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+body > header {
+    background-color: rgb(141 197 235);
+    color: black;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+}
+
+body > header > #row > a:link {
+    color: black;
+}
+
+body > header > #row > a:active {
+    color: black;
+}
+
+body > header > #row > a:visited {
+    color: black;
+}
+
+body > header > #row > a:hover {
+    color: black;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}

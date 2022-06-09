@@ -28,29 +28,29 @@
             $this->$client = $client;
         }
 
-        static function getUser(PDO $db, int $id) : Client {
+        static function getUser(PDO $db, int $id) : User {
             $stmt = $db->prepare('SELECT * FROM User WHERE id = ?');
             $stmt->execute(array($id));
-            $client = $stmt->fetch();
+            $user = $stmt->fetch();
 
-            return new Client(
-                intval($client['id']),
-                $client['profilePic'],
-                $client['username'],
-                $client['password'],
-                intval($client['name']),
-                intval($client['age']),
-                intval($client['nif']),
-                intval($client['phone']),
-                $client['address'],
-                $client['client']
+            return new User(
+                intval($user['id']),
+                $user['profilePic'],
+                $user['username'],
+                $user['password'],
+                $user['name'],
+                intval($user['age']),
+                intval($user['nif']),
+                intval($user['phone']),
+                $user['address'],
+                $user['client']
             );
         }
 
-        static function getUserByUsername(PDO $db, int $userId) : User {
-            $stmt = $db->prepare('SELECT * FROM User WHERE id = ?');
+        static function getUserByUsername(PDO $db, string $username) : User {
+            $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
 
-            $stmt->execute(array($userId));
+            $stmt->execute(array($username));
             $user = $stmt->fetch();
 
             return new User(

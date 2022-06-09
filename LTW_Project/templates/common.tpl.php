@@ -15,13 +15,23 @@
     </head>
     <body>
         <header>
-            <a href="../pages/index.php">
-                <img src="../images/logo.png" width=80>
-                <h1>My Food</h1>
-            </a>
+            <div class="container2" id="row">
+                <?php if ($session->isLoggedIn()) { ?>
+                    <a href= <?= "../pages/index.php?userUsername=" . $session->getName()?>>
+                        <img src="../images/logo.png" alt="" width="70" height="70">
+                    </a>
+                    <a href= <?= "../pages/index.php?userUsername=" . $session->getName()?> class="hd-ttl">MyFood</a>
+                <?php } 
+                else { ?> 
+                    <a href="../pages/index.php">
+                        <img src="../images/logo.png" alt="" width="70" height="70">
+                    </a>
+                    <a href="../pages/index.php" class="hd-ttl">MyFood</a>
+                <?php } ?>
+            </div>
             <?php
-                if ($session->isLoggedIn()) drawLogoutForm($session);
-                else drawLoginForm($session);
+                if ($session->isLoggedIn()) drawUsernameForm($session);
+                else drawLoginForm();
             ?>
         </header>
     <main>
@@ -29,7 +39,21 @@
 
 <?php function drawFooter() { ?> 
     </main>
-        <footer>My Food; 2022</footer>
+    <footer class="ft">
+        <div class="ft-txt">
+            <a href="contact.html">Contacts</a>
+            <a href="about.html">About Us</a>
+            <a href="//livroreclamacoes.pt/">Complaints</a>
+        </div>
+        <div class="back-top">
+            <a href="#">Back to top</a>
+        </div>
+    </footer>
+    <footer class="ft2">
+        <div class="ft-txt2">
+            <span class="rights">© 2022 MyFood  · All Rights Reserved</span>
+        </div>
+    </footer>
     </body>
 </html>
 <?php } ?>
@@ -41,5 +65,5 @@
 <?php } ?>
 
 <?php function drawUsernameForm(Session $session) { ?>
-    <p><?=$session->getName()?></p>
+    <a href=<?="../pages/profile.php?userId=" . $session->getId()?>><?=$session->getName()?></a>
 <?php } ?>
