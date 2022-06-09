@@ -89,8 +89,14 @@
             $stmt->execute();
 
             $grade = $stmt->fetch();
-
-            return intval($grade['restaurantGrade']);
+            
+            if ($grade) {
+                if ($grade['restaurantGrade']) {
+                    return intval($grade['restaurantGrade']);
+                }
+            }
+            
+            return 0;
         }
 
         static function getNumberClassifications(PDO $db, int $id) : int {

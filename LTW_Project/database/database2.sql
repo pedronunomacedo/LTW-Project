@@ -111,15 +111,15 @@ VALUES
 
 INSERT INTO Review ('idClient', 'idPedido', 'title', 'comment', 'submissonDate', 'submissonHour', 'grade', 'answer', 'idOwner')
 VALUES
-  (1, 9, "Comida","Comida muito boa!","Oct 27, 2021","12:50 PM", 5, "Obrigado pela sua presença!", 10),
-  (2, 3, "Comida muito salgada","Achei a minha pizza muito salgada.","Oct 26, 2021","13:24 PM", 3.5, "Obrigado pela sua opinião. Iremos fazer melhor da próxima vez!", 11),
-  (3, 9, "Ótima comida","Têm de provar as pizzas, são divinais!","Sept 13, 2021","12:30 PM", 4.4, null, 12),
-  (4, 5, "Um pouco seco","Achei o pão um pouco seco. Poderia ser do calor que fazia no dia em que fui!","Dec 26, 2021","14:00 PM", 4, null, 13),
-  (5, 5, "Não há igual","Uma das melhores comidas que poderia haver!","Feb 06, 2021","13:00 PM", 5, null, 14),
-  (6, 7, "Massa","Experimentem a massa a carbonara. Não se iram arrepender!","Oct 27, 2021","12:50 PM", 4.2, null, 15),
-  (7, 8, "Bebidas","Achei que as bebidas pdoeriam estar um pouco mais frescas. Ainda por cima nos dias quentes de verão!","Jul 11, 2021","13:32 PM", 3, null, 16),
-  (8, 6, "Arroz de tamboril","Poderiam ter servido mais arroz!","Jun 23, 2021","12:59 PM", 3.5, null, 17),
-  (9, 10, "Mousse de chocolate","Uma das melhores que já provei! As pitadas de sal dão um toque especial.", "Aug 23, 2021","14:37 PM", 4.2, null, 18),
+  (1, 10, "Comida","Comida muito boa!","Oct 27, 2021","12:50 PM", 5, "Obrigado pela sua presença!", 10),
+  (2, 9, "Comida muito salgada","Achei a minha pizza muito salgada.","Oct 26, 2021","13:24 PM", 3.5, "Obrigado pela sua opinião. Iremos fazer melhor da próxima vez!", 11),
+  (3, 8, "Ótima comida","Têm de provar as pizzas, são divinais!","Sept 13, 2021","12:30 PM", 4.4, null, 12),
+  (4, 7, "Um pouco seco","Achei o pão um pouco seco. Poderia ser do calor que fazia no dia em que fui!","Dec 26, 2021","14:00 PM", 4, null, 13),
+  (5, 6, "Não há igual","Uma das melhores comidas que poderia haver!","Feb 06, 2021","13:00 PM", 5, null, 14),
+  (6, 5, "Massa","Experimentem a massa a carbonara. Não se iram arrepender!","Oct 27, 2021","12:50 PM", 4.2, null, 15),
+  (7, 4, "Bebidas","Achei que as bebidas pdoeriam estar um pouco mais frescas. Ainda por cima nos dias quentes de verão!","Jul 11, 2021","13:32 PM", 3, null, 16),
+  (8, 3, "Arroz de tamboril","Poderiam ter servido mais arroz!","Jun 23, 2021","12:59 PM", 3.5, null, 17),
+  (9, 2, "Mousse de chocolate","Uma das melhores que já provei! As pitadas de sal dão um toque especial.", "Aug 23, 2021","14:37 PM", 4.2, null, 18),
   (10, 1, "Peixe","Muito bom!","Apr 09, 2021","13:17 PM", 3.9, null, 19);
 
 

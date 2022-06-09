@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="my-addresses-section">
-        <button class="new-address-btn"><img src="../images/plus-address.png" width=20> Add new address</button>
+        <div class="new-address-div"><img src="../images/plus-address.png" width=20> Add new address</div>
         <div class="user-addresses">
             <?php foreach($userAddresses as $address) { ?>
                 <div class="user-address">
