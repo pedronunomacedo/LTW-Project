@@ -19,8 +19,8 @@
                             </div> -->
                             <div class="form-group was-validated">
                                 <!-- required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" -->
-                                <input type="text" id="email" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off">
-                                <label for="email">Insert your username</label>
+                                <input type="text" id="username" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off">
+                                <label for="username">Insert your username</label>
                             </div>
                             <div class="form-group was-validated">
                                 <input type="password" id="password" name="password" class="form-control form-control-filled" required autocorrect="off" autocapitalize="off" autocomplete="off">

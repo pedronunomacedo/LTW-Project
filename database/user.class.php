@@ -15,7 +15,7 @@
         public string $address;
         public int $client;
         
-        public function __construct($id, $profilePic, $username, $password, $name, $age, $nif, $phone, $address, $client) {
+        public function __construct(int $id, string $profilePic, string $username, string $password, string $name, int $age, int $nif, int $phone, string $address, int $client) {
             $this->id = $id;
             $this->profilePic = $profilePic;
             $this->username = $username;
@@ -29,7 +29,8 @@
         }
 
         static function getUser(PDO $db, int $id) : User {
-            $stmt = $db->prepare('SELECT * FROM User WHERE id = ?');
+            $stmt = $db->prepare("SELECT * FROM User WHERE id = ?");
+
             $stmt->execute(array($id));
             $user = $stmt->fetch();
 
@@ -43,14 +44,15 @@
                 intval($user['nif']),
                 intval($user['phone']),
                 $user['address'],
-                $user['client']
+                intval($user['client'])
             );
         }
 
         static function getUserByUsername(PDO $db, string $username) : User {
-            $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
+            $stmt = $db->query("SELECT * FROM User WHERE username = :username");
+            $stmt->bindParam(':username', $username);
 
-            $stmt->execute(array($username));
+            $stmt->execute();
             $user = $stmt->fetch();
 
             return new User(

@@ -10,7 +10,7 @@
         public string $submissonDate;
         public string $submissonHour;
 
-        public function __construct($id, $idRestaurant, $idUser, $state, $delieverAddress, $submissonDate, $submissonHour) {
+        public function __construct(int $id, int $idRestaurant, int $idUser, string $state, string $delieverAddress, string $submissonDate, string $submissonHour) {
             $this->id = $id;
             $this->idRestaurant = $idRestaurant;
             $this->idUser = $idUser;
@@ -27,9 +27,9 @@
             
             while ($order = $stmt->fetch()) {
                 $userOrders[] = new Pedido(
-                    $order['id'],
-                    $order['idRestaurant'],
-                    $order['idUser'],
+                    intval($order['id']),
+                    intval($order['idRestaurant']),
+                    intval($order['idUser']),
                     $order['state'],
                     $order['delieverAddress'],
                     $order['submissonDate'],
@@ -46,9 +46,9 @@
             $User = $stmt->fetch();
 
             return new Pedido(
-                $User['id'],
-                $User['idRestaurant'],
-                $User['idUser'],
+                intval($User['id']),
+                intval($User['idRestaurant']),
+                intval($User['idUser']),
                 $User['comment'],
                 $User['state'],
                 $User['delieverAddress'],
@@ -63,9 +63,9 @@
             $User = $stmt->fetch();
 
             return new $User(
-                $User['id'],
-                $User['idRestaurant'],
-                $User['idClient'],
+                intval($User['id']),
+                intval($User['idRestaurant']),
+                intval($User['idClient']),
                 $User['comment'],
                 $User['state'],
                 $User['delieverAddress'],

@@ -23,11 +23,11 @@
             $plate = $stmt->fetch();
 
             return new Plate(
-                $plate['id'],
-                $plate['idRestaurant'],
+                intval($plate['id']),
+                intval($plate['idRestaurant']),
                 $plate['name'],
                 $plate['category'],
-                $plate['price']
+                floatval($plate['price'])
             );
         }
 
@@ -39,11 +39,11 @@
 
             while ($plate = $stmt->fetch()) {
                 $allPlates[] = new Plate(
-                    $plate['id'],
-                    $plate['idRestaurant'],
+                    intval($plate['id']),
+                    intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    $plate['price']
+                    floatval($plate['price'])
                 );
             }
             
@@ -58,11 +58,11 @@
 
             while ($plate = $stmt->fetch()) {
                 $plates[] = new Plate(
-                    $plate['id'],
-                    $plate['idRestaurant'],
+                    intval($plate['id']),
+                    intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    $plate['price']
+                    floatval($plate['price'])
                 );
             }
             
@@ -77,11 +77,11 @@
 
             while ($plate = $stmt->fetch()) {
                 $categoryPlates[] = new Plate(
-                    $plate['id'],
-                    $plate['idRestaurant'],
+                    intval($plate['id']),
+                    intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    $plate['price']
+                    floatval($plate['price'])
                 );
             }
             
