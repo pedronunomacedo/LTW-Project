@@ -27,29 +27,35 @@
     //$client = $user->client;
 
     ?>
-    <div class="my-profile-section">
+    <div class="my-profile-section" class="show">
         <div>
             <img src="<?=$userProfilePic?>" width=150>
             <h2><?=ucwords($userName)?></h2>
         </div> 
         <div class="my-profile-div">
-            <form method="GET">
-                <p>Name: <input type="text" placeholder="name"></p>
+            <form action="../actions/action_edit_profile.php" method="post">
+                <p><label for="name">Insert your new name</label></p>
+                <input type="text" placeholder="name" name="name"><p>
+                <p><label for="username">Insert your new username: </label></p>
+                <input type="text" id="name" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off" placeholder="username">
+                <p><label for="phone">Insert your new phone number</label></p>
+                <input type="text" placeholder="phone" name="phone"><p>
+                <button type="submit" class="btn-save-changes">Save changes</button>
             </form>
-            <form method="GET">
-                <p>Email: <input type="text" placeholder="email"></p>
-            </form>
-            <form method="GET">
-                <p>Phone: <input type="text" placeholder="phone"></p>
-            </form>
-            <button type="button" class="btn-save-changes">Save changes</button>
             <form action="../actions/action_logout.php" method="post" class="logout">
                 <button type="submit">Logout</button>
             </form>
         </div>
     </div>
-    <div class="my-addresses-section">
-        <div class="new-address-div"><img src="../images/plus-address.png" width=20> Add new address</div>
+    <div class="my-addresses-section" class="hidden">
+        <div class="new-address-div"><button><img src="../images/plus-address.png" width=20> Add new address</button></div>
+        <div for="new-address-div">
+            <form action=<?php echo "../actions/action_add_new_address.php" ?> method="post">
+                <p><label for="new-address">Insert your new address</label></p>
+                <input type="text" placeholder="address" name="new-address" class="diactivated"></p>
+                <button type="submit" class="btn-save-changes">Save changes</button>
+            </form>
+        </div>
         <div class="user-addresses">
             <?php foreach($userAddresses as $address) { ?>
                 <div class="user-address">
@@ -61,7 +67,7 @@
         </div>
     </div>
 
-    <div class="my-orders-div">
+    <div class="my-orders-div" class="hidden">
         <?php foreach ($userOrders as $order) { ?>
             <?php $restaurantName = Restaurant::getRestaurantName($db, intval($order->idRestaurant)); ?>
             <div class="user-order">
@@ -71,7 +77,7 @@
         <?php } ?>
     </div>
 
-    <div class="my-favorites-div">
+    <div class="my-favorites-div" class="hidden">
         <?php foreach ($favoriteRestaurants as $favorite) { ?>
             <?php $restaurantName = Restaurant::getRestaurantName($db, intval($favorite->idRestaurant)); ?>
             <div class="user-order">

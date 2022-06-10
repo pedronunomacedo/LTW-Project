@@ -74,5 +74,22 @@
 
             return $reviews;
         }
+
+        function save($db) {
+            $stmt = $db->prepare('UPDATE User 
+                                SET name = ?, username = ? , phone = ? 
+                                WHERE id = ? '
+            );
+      
+            $stmt->execute(array($this->name, $this->username, $this->phone, $this->id));
+        }
+
+        static function saveAddress(PDO $db, int $id, string $newAddress) {
+            $stmt = $db->prepare("INSERT INTO Addresses ('idUser', 'address')
+            VALUES ( ? , ? )"
+            );
+
+            $stmt->execute(array($id, $newAddress));
+        }
     }
 ?>
