@@ -144,7 +144,7 @@ VALUES
   (4, "Meat Lover Burguer", "burger", 7.99),
   (6, "Extra Cheese Pizza", "pizza", 4.99),
   (1, "Seaside Sandwich", "burger", 5.00),
-  (3, "Coca-Cola", "coldDrink", 1.88),
+  (3, "Coca-Cola", "drink", 1.88),
   (8, "Mousse de chocolate", "dessert", 1.79),
   (8, "Palito de limão", "dessert", 1.20),
   (9, "Feijoada", "extras", 0.99),

@@ -33,6 +33,26 @@
                 else drawLoginForm();
             ?>
         </header>
+        <div class = "scroll_menu">
+            <div class = "scroll2">
+                <a href = "../pages/index.php">Home</a>
+                <a href = "../pages/aboutUs.php">About Us</a>
+                <a href = "../pages/category.php?category=burger">Burgers</a>
+                <a href = "../pages/category.php?category=pizza">Pizza</a>
+                <a href = "../pages/category.php?category=sandwiches">Sandwiches</a>
+                <a href = "../pages/category.php?category=hot-dogs">Hot-Dogs</a>
+                <a href = "../pages/category.php?category=sushi">Sushi</a>
+                <a href = "../pages/category.php?category=soups">Soups</a>
+                <a href = "../pages/category.php?category=fried">Fried</a>
+                <a href = "../pages/category.php?category=vegetarian">Vegetarian</a>
+                <a href = "../pages/category.php?category=mexican">Mexican</a>
+                <a href = "../pages/category.php?category=portuguese">Portuguese</a>
+                <a href = "../pages/category.php?category=ice-cream">Ice-Cream</a>
+                <a href = "../pages/category.php?category=drinks">Drinks</a>
+                <a href = "../pages/category.php?category=desserts">Desserts</a>
+                <a href = "../pages/contactUs.php">Contact Us</a>
+            </div>
+        </div>
     <main>
 <?php } ?>
 
