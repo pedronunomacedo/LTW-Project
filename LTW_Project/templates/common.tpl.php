@@ -1,7 +1,6 @@
 <?php
     declare(strict_types = 1);
     
-    require_once(__DIR__ . '/../utils/session.php');
 ?>
 
 <?php function drawHeader(Session $session) { ?>
@@ -20,13 +19,13 @@
                     <a href= <?= "../pages/index.php?userUsername=" . $session->getName()?>>
                         <img src="../images/logo.png" alt="" width="70" height="70">
                     </a>
-                    <a href= <?= "../pages/index.php?userUsername=" . $session->getName()?> class="hd-ttl">MyFood</a>
+                    <a id="headerUsername" href= <?= "../pages/index.php?userUsername=" . $session->getName()?> class="hd-ttl">MyFood</a>
                 <?php } 
                 else { ?> 
                     <a href="../pages/index.php">
                         <img src="../images/logo.png" alt="" width="70" height="70">
                     </a>
-                    <a href="../pages/index.php" class="hd-ttl">MyFood</a>
+                    <a id="headerLogo" href="../pages/index.php" class="hd-ttl">MyFood</a>
                 <?php } ?>
             </div>
             <?php
@@ -43,7 +42,6 @@
         <div class="ft-txt">
             <a href="contact.html">Contacts</a>
             <a href="about.html">About Us</a>
-            <a href="//livroreclamacoes.pt/">Complaints</a>
         </div>
         <div class="back-top">
             <a href="#">Back to top</a>
