@@ -20,8 +20,8 @@
             
             while ($address = $stmt->fetch()) {
                 $userAddresses[] = new Address (
-                    $address['id'],
-                    $address['idUser'], 
+                    intval($address['id']),
+                    intval($address['idUser']), 
                     $address['address']
                 );
             }
