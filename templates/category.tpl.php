@@ -4,7 +4,7 @@
 ?>
 
 <?php function drawCategoryRestaurants(PDO $db, array $categoryRestaurants, string $category) { ?>
-    <h1><?=ucwords($category)?></h1>
+    <h1><?=ucwords($category,"-")?></h1>
 
     <section class="category-restaurants">
         <?php
