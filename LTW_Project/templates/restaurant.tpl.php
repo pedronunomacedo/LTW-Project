@@ -151,7 +151,7 @@
 
 <?php function restaurantDiv(Restaurant $restaurant) { ?>
     <section class="restaurant-div">
-        <img src="../images/restaurantImg.png">
+        <a href=<?php echo "../pages/restaurant.php?id=" . $restaurant->id?>><img src="../images/restaurantImg.png"></a>
         <p><?=$restaurant->name?></p>
     </section>
 <?php } ?>
