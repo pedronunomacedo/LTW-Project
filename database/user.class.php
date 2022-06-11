@@ -78,10 +78,10 @@
         }
 
         function save($db) {
-            $stmt = $db->prepare('UPDATE User 
-                                SET name = ?, username = ? , phone = ? 
-                                WHERE id = ? '
-            );
+            $stmt = $db->prepare('UPDATE User SET name = ?,
+                                 username = ?,
+                                 phone = ?
+                                WHERE id = ?');
       
             $stmt->execute(array($this->name, $this->username, $this->phone, $this->id));
         }

@@ -57,7 +57,7 @@
     <section class="most-popular-plates">
         <div class="mini-title">
             <h1>The most popular plates</h1>
-            <a href="popularRestaurant.php?">See all</a>
+            <a href="popularPlates.php?">See all</a>
         </div>
         <div class="group">
         <?php

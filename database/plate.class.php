@@ -87,5 +87,9 @@
             
             return $categoryPlates;
         }
+
+        function cmp($plate1, $plate2) {
+            return $plate1->price > $plate2->price;
+        }
     }
 ?>

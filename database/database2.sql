@@ -57,7 +57,8 @@ CREATE TABLE Plate (
     idRestaurant integer REFERENCES Restaurant (id),
     name VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
-    price VARCHAR(6) NOT NULL
+    price VARCHAR(6) NOT NULL,
+    grade integer
 );
 
 CREATE TABLE Addresses(
