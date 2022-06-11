@@ -1,0 +1,65 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+}
+.box {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.avatar::after {
+    opacity: 0;
+    font-family: FontAwesome;
+    content: "\f040";
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4px;
+    left: 4px;
+    width: 92px;
+    height: 92px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 350ms ease-in-out;
+}
+.avatar:hover::after {
+    opacity: 1;
+}
+
+.avatar {
+    box-sizing: border-box;
+    border: 4px solid silver;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    top: 60%;
+    left: 60%;
+    z-index: -1;
+    transition: 350ms ease-in-out;
+}
+.box input {
+    display: none;
+}
+.box input:checked + div.menu {
+    opacity: 1;
+    z-index: 999;
+}

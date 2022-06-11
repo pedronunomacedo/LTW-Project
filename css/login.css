@@ -302,6 +302,46 @@ small {
     color: #fff;
 }
 
+.ft {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-txt > a {
+    padding-inline: 2em;
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.ft-txt > a:hover {
+    text-decoration: underline;
+}
+
+.ft-txt {
+    padding-block: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.back-top {
+    position: absolute;
+    right: 40px;
+    text-transform: uppercase;
+}
+
+.back-top > a {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.back-top > a:hover {
+    text-decoration: underline;
+}
+
 #after1, #after2, #after3, #after4 {
     display: none;
 }

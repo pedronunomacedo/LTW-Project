@@ -150,10 +150,14 @@
 <?php } ?>
 
 <?php function restaurantDiv(Restaurant $restaurant) { ?>
-    <section class="restaurant-div">
-        <a href=<?php echo "../pages/restaurant.php?id=" . $restaurant->id?>><img src="../images/restaurantImg.png"></a>
-        <p><?=$restaurant->name?></p>
-    </section>
+    <div class="row">
+        <a href=<?="../pages/restaurant.php?id=" . $restaurant->id?>>
+            <section class="restaurant-div">
+                <img src="../images/restaurantImg.png">
+                <p><?=$restaurant->name?></p>
+            </section>
+        </a>
+    </div>
 <?php } ?>
 
 <?php function drawFavoriteRestaurant(Restaurant $restaurant, float $restaurantGrade) { ?>
