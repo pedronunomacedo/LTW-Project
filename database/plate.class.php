@@ -6,9 +6,9 @@
         public int $idRestaurant;
         public string $name;
         public string $category;
-        public float $price;
+        public string $price;
 
-        public function __construct(int $id, int $idRestaurant, string $name, string $category, float $price) {
+        public function __construct(int $id, int $idRestaurant, string $name, string $category, string $price) {
             $this->id = $id;
             $this->idRestaurant = $idRestaurant;
             $this->name = $name;
@@ -27,7 +27,7 @@
                 intval($plate['idRestaurant']),
                 $plate['name'],
                 $plate['category'],
-                floatval($plate['price'])
+                $plate['price']
             );
         }
 
@@ -43,7 +43,7 @@
                     intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    floatval($plate['price'])
+                    $plate['price']
                 );
             }
             
@@ -62,7 +62,7 @@
                     intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    floatval($plate['price'])
+                    $plate['price']
                 );
             }
             
@@ -81,7 +81,7 @@
                     intval($plate['idRestaurant']),
                     $plate['name'],
                     $plate['category'],
-                    floatval($plate['price'])
+                    $plate['price']
                 );
             }
             

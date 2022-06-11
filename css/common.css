@@ -2,13 +2,12 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: #f3f3f3;
     font-family: Bahnschrift, serif;
 }
 
-body > header {
+header {
     background-color: rgb(141 197 235);
     color: black;
     padding: 1em;
@@ -16,10 +15,26 @@ body > header {
     align-items: center;
 }
 
-body > header {
-    background-color: rgb(141 197 235);
+.hd-ttl {
+    padding-left: 0.5em;
+    text-decoration: none;
     color: black;
-    padding: 1em;
+    font-size:50px;
+}
+
+.username-div {
+    width: 100%;
+}
+
+.user-name {
+    color: black;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-left: 0.2em;
+}
+
+.img-name {
+    float: right;
     display: flex;
     align-items: center;
 }
@@ -29,70 +44,80 @@ body > header {
     align-items: center;
 }
 
-body > header > #row > a:link {
+.container2,button > a:link {
     color: black;
 }
 
-body > header > #row > a:active {
+.container2,button > a:active {
     color: black;
 }
 
-body > header > #row > a:visited {
+.container2,button > a:visited {
     color: black;
 }
 
-body > header > #row > a:hover {
+.container2,button > a:hover {
     color: black;
 }
 
-.hd-ttl {
-    font-size: 50px;
-    color: white;
-    text-decoration-color: white;
+.login {
+    width: 100%;
+    display: block;
+}
+
+.login_form {
+    float: right;
+    margin-block-end: 0;
+}
+
+.btn {
+    background-color: rgb(141 197 235);
+    color:black;
+    border: none;
+    font-size: 15px;
+}
+
+.btn > a {
     text-decoration: none;
-    padding-left: 1rem;
 }
 
-.ft {
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+    margin-top: 1em;
 }
 
-.ft-txt > a {
-    padding-inline: 2em;
+.all-content {
+    position: relative;
+    background-color: #333;
+    padding-block: 0.5em;
+    overflow: hidden;
+}
+
+.all-content span {
+    float: left;
+    text-align: center;
+    padding-left: 1em;
     text-decoration: none;
-    text-decoration-color: white;
     color: white;
-}
-
-.ft-txt > a:hover {
-    text-decoration: underline;
 }
 
 .ft-txt {
-    padding-block: 1rem;
-    color: white;
-    text-transform: uppercase;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ft-txt a {
+    padding-inline: 1em;
 }
 
 .back-top {
-    position: absolute;
-    right: 40px;
-    text-transform: uppercase;
+    float: right;
+    padding-right: 1em;
 }
 
-.back-top > a {
+.back-top a, .ft-txt a {
     text-decoration: none;
-    text-decoration-color: white;
     color: white;
-}
-
-.back-top > a:hover {
-    text-decoration: underline;
-}
-
-*, ::before, ::after {
-    box-sizing: border-box;
 }

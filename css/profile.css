@@ -1,0 +1,61 @@
+.flex {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    height: 33px;
+    padding-block: 1em;
+}
+
+.flex:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+}
+
+.main-titles {
+    width:300px;
+    height:fit-content;
+    margin: 2em;
+    padding: 1em;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.5);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.max {
+    display: flex;
+    width: auto;
+}
+
+.center {
+    margin: 2em;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.both {
+    display: flex;
+}
+
+.user-addresses {
+    padding-left: 4em;
+}
+
+.user-address {
+    height: 50%;
+    border: 2px solid #cccccc;
+    margin-bottom: 1em;
+}
+
+.pd {
+    margin: 10px;
+}
+
+.btns {
+    margin-top: 2em;
+}
+
+.new-address-div {
+    margin: auto;
+}

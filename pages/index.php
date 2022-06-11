@@ -14,40 +14,52 @@
     $db = getDatabaseConnection();
 ?>
     <link rel="stylesheet" href="../css/common.css"> <!-- Style of the header and the footer -->
+    <link rel="stylesheet" href="../css/index.css"> <!-- Style of body -->
     
     <section class="best-burgers">
-        <h1>The most popular Hamburguer options</h1>
-        <a href="category.php?category=burger">See all</a>
-        <?php
-            $category = "burger";
-            $restaurants = Restaurant::getCategoryRestaurants($db, $category);
-            $i = 0;
-            foreach ($restaurants as $restaurant) {
-                if ($i == 3) break;
-                restaurantDiv($restaurant);
-                $i++;
-            }
-        ?>
+        <div class="mini-title">
+            <h1>The most popular Hamburguer options</h1>
+            <a href="category.php?category=burger">See all</a>
+        </div>
+        <div class="group">
+            <?php
+                $category = "burger";
+                $restaurants = Restaurant::getCategoryRestaurants($db, $category);
+                $i = 0;
+                foreach ($restaurants as $restaurant) {
+                    if ($i == 3) break;
+                    restaurantDiv($restaurant);
+                    $i++;
+                }
+            ?>
+        </div>
     </section>
 
     <section class="bext-pizzas">
-        <h1>The best Pizzas</h1>
-        <a href="category.php?category=pizza">See all</a>
-        <?php
-            $category = "pizza";
-            $restaurants = Restaurant::getCategoryRestaurants($db, $category);
-            $i = 0;
-            foreach ($restaurants as $restaurant) {
-                if ($i == 3) break;
-                restaurantDiv($restaurant);
-                $i++;
-            }
-        ?>
+        <div class="mini-title">
+            <h1>The best Pizzas</h1>
+            <a href="category.php?category=pizza">See all</a>
+        </div>
+        <div class="group">
+            <?php
+                $category = "pizza";
+                $restaurants = Restaurant::getCategoryRestaurants($db, $category);
+                $i = 0;
+                foreach ($restaurants as $restaurant) {
+                    if ($i == 3) break;
+                    restaurantDiv($restaurant);
+                    $i++;
+                }
+            ?>
+        </div>
     </section>
 
     <section class="most-popular-plates">
-        <h1>The most popular plates</h1>
-        <a href="popularRestaurant.php?">See all</a>
+        <div class="mini-title">
+            <h1>The most popular plates</h1>
+            <a href="popularRestaurant.php?">See all</a>
+        </div>
+        <div class="group">
         <?php
             $category = "burger";
             $restaurants = Plate::getCategoryPlates($db, $category);
@@ -58,6 +70,7 @@
                 $i++;
             }
         ?>
+        </div>
     </section>
     
 <?php
