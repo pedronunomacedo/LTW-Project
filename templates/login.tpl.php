@@ -20,7 +20,7 @@
                             <div class="form-group was-validated">
                                 <!-- required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" -->
                                 <input type="text" id="username" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off">
-                                <label for="username">Insert your username</label>
+                                <label for="username" class="form-control-label">Insert your username</label>
                             </div>
                             <div class="form-group was-validated">
                                 <input type="password" id="password" name="password" class="form-control form-control-filled" required autocorrect="off" autocapitalize="off" autocomplete="off">
@@ -43,28 +43,47 @@
             <span class="d-block lighter">Create your user account to start ordering.</span>
             <div id="signup-container">
                 <form action="test.php" class="form-search needs-validation" id="reg-form" autocomplete="off" method="post">
-                    <div id="erur" class="err-signup error-placer alert alert-danger">
+                    <!-- <div id="erur" class="err-signup error-placer alert alert-danger">
                         The email is invalid
+                    </div> -->
+                    <div class="form-group was-validated">
+                        <input type="text" id="username_reg" name="username_reg" class="form-control form-control-filled" required autocorrect="off" autocomplete="off" autocapitalize="off">
+                        <label for="username_reg" class="form-control-label">Insert your username</label>
                     </div>
                     <div class="form-group was-validated">
-                        <input type="text" id="email_register" name="email_register" class="form-control form-control-filled" required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" autocorrect="off" autocomplete="off" autocapitalize="off">
-                        <label for="email_register" class="form-control-label">Insert your email</label>
+                        <input type="password" id="password_reg" name="password_reg" class="form-control form-control-filled" required pattern=".{8,}" autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="password_reg" class="form-control-label">Password</label>
                     </div>
-                    <button type="button" id="cnt-btn" class="btn btn-primary btn-lg btn-block sign-up-button" onclick="changeRegister()">Continue</button>
-                    <div class="form-group was-validated" id="after1">
-                        <input type="text" id="nome" name="nome" class="form-control form-control-filled" required>
-                        <label for="nome" class="form-control-label">Name</label>
+                    <div class="form-group was-validated">
+                        <input type="text" id="name_reg" name="name_reg" class="form-control form-control-filled" required autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="name_reg" class="form-control-label">Name</label>
                     </div>
-                    <div class="form-group was-validated" id="after2">
-                        <input type="password" id="password2" name="password2" class="form-control form-control-filled" required pattern=".{8,}" autocorrect="off" autocapitalize="off" autocomplete="off">
-                        <label for="password2" class="form-control-label">Password</label>
+                    <div class="form-group was-validated">
+                        <input type="text" id="age_reg" name="age_reg" class="form-control form-control-filled" required pattern="[0-9]*" autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="age_reg" class="form-control-label">Age</label>
                     </div>
-                    <div class="form-group prvc-text" id="after3">
+                    <div class="form-group was-validated">
+                        <input type="text" id="nif_reg" name="nif_reg" class="form-control form-control-filled" required pattern="[0-9]*" minlength="9" maxlength="9" autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="age_reg" class="form-control-label">NIF (9 digits)</label>
+                    </div>
+                    <div class="form-group was-validated">
+                        <input type="text" id="phone_reg" name="phone_reg" class="form-control form-control-filled" required pattern="[0-9]*" minlength="9" maxlength="9" autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="phone_reg" class="form-control-label">Phone Number (9 digits)</label>
+                    </div>
+                    <div class="form-group was-validated">
+                        <input type="text" id="addr_reg" name="addr_reg" class="form-control form-control-filled" required autocorrect="off" autocapitalize="off" autocomplete="off">
+                        <label for="addr_reg" class="form-control-label">Adress</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="status" value="client"> Client
+                        <input type="radio" name="status" value="owner"> Owner
+                    </div>
+                    <div class="form-group prvc-text">
                         <p>
                             By creating an account, you accept the Privacy Politics and the Terms and Conditions of MyFood.
                         </p>
                     </div>
-                    <input type="submit" id="after4" class="btn btn-primary btn-block btn-lg">
+                    <input type="submit" class="btn btn-primary btn-block btn-lg">
                 </form>
                 <section class="new-text" id="new-text">
                     <div class="column">
@@ -96,4 +115,4 @@
             <small>The fields followed by a * are mandatory.</small>
         </div>
     </section>
-<?php } ?>
+<?php } ?> 

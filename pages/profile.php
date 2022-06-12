@@ -13,6 +13,7 @@
 ?>
   <link rel="stylesheet" href="../css/common.css"> <!-- Style of the header and the footer -->
   <link rel="stylesheet" href="../css/profile.css"> <!-- Style of the main body -->
+  <script src="../js/main.js"></script>
 <?php
   $db = getDatabaseConnection();
 

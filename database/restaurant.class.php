@@ -108,6 +108,25 @@
             return $numClassifications;
         }
 
+        static function getProperRestaurants(PDO $db, int $userId) {
+            $stmt = $db->prepare('SELECT * FROM Restaurant WHERE Restaurant.idUser = ?');
+            $stmt->execute(array($userId));
+
+            $userRestaurants = array();
+
+            while ($restaurant = $stmt->fetch()) {
+                $userRestaurants[] = new Restaurant(
+                    $restaurant['id'],
+                    $restaurant['idUser'],
+                    $restaurant['name'],
+                    $restaurant['address'],
+                    $restaurant['type']
+                );
+            }
+
+            return $userRestaurants;
+        }
+
         // static function getRestaurantComments(PDO $db, int $id) {
         //     $stmt = $db->prepare('SELECT select Pedido.idRestaurant, Review.idPedido, Review.comment, Review.submissonDate, Review.submissonHour, Review.grade, Review.answer from Review,Pedido
         //                         where (Review.idPedido=Pedido.id AND Pedido.idRestaurant=?)');

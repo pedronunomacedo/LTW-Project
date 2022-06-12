@@ -4,14 +4,18 @@
 ?>
 
 <?php function drawCategoryRestaurants(PDO $db, array $categoryRestaurants, string $category) { ?>
-    <h1><?=ucwords($category,"-")?></h1>
+    <h1><?=ucwords($category)?></h1>
 
-    <section class="category-restaurants">
+    <div class="category-restaurants">
         <?php
             foreach ($categoryRestaurants as $restaurant) { ?>
-                <img src="https://api.lorem.space/image/house?w=150&h=150">
-                <p><?=$restaurant->name?></p>
+                <div class="column">
+                    <div class="items">
+                        <img src="https://api.lorem.space/image/house?w=150&h=150">
+                        <p><?=$restaurant->name?></p>
+                    </div>
+                </div>
             <?php }
         ?>
-    </section>
+    </div>
 <?php } ?>

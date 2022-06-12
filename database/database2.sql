@@ -15,9 +15,9 @@ CREATE TABLE User (
   password varchar(20) not null,
   name varchar(30) not null,
   age integer not null,
-  nif integer not null unique,
-  phone integer not null unique,
-  address varchar(30) not null unique,
+  nif integer not null,
+  phone integer not null,
+  address varchar(30) not null,
   client integer
 );
 
@@ -82,8 +82,8 @@ VALUES
   ("JamesonGreene", "../images/profilePic.png","-36Z?paU-(","Jameson Greene",68,"349435629","285844453","nuncc@icloud.edu",1),
   ("ImaCarpenter", "../images/profilePic.png","YN9K.p'der","Ima Carpenter",18,"316523367","138734174","eratt@icloud.net",1),
   ("GailMarks", "../images/profilePic.png","nT%_2t4M","Gail Marks",65,"654456174","415659579","sollicitudinn.commodo@google.com",1),
-  ("UlyssesSweeney", "../images/profilePic.png","MdL}Y;2XN","Ulysses Sweeney",52,"558777981","788164465","acc@icloud.net",1),
-  ("BarclayFuller", "../images/profilePic.png","^@9XZeyT$q","Barclay Fuller",16,"526666647","758831526","suspendissee.commodo@icloud.com",1),
+  ("UlyssesPete", "../images/profilePic.png","MdL}Y;2XN","Ulysses Pete",52,"558777981","788164465","acc@icloud.net",1),
+  ("BarclayCoupper", "../images/profilePic.png","^@9XZeyT$q","Barclay Coupper",16,"526666647","758831526","suspendissee.commodo@icloud.com",1),
   ("EleanorDurham", "../images/profilePic.png","vYdsq4y*3b","Eleanor Durham",87,"374645444","478614177","turpiss@hotmail.couk",1),
   ("IgnaciaAdkins", "../images/profilePic.png","v!X)Tz522","Ignacia Adkins",44,"375427668","736499488","fermentumm@protonmail.couk",1),
   ("EmeraldHopper", "../images/profilePic.png","cQ)@UMr4Bv","Emerald Hopper",67,"832437898","345281648","fringillaa.cursus@outlook.org",1),
@@ -95,7 +95,7 @@ VALUES
   ("UlyssessSweeney", "../images/profilePic.png","{s9[pSZN%w","Ulyssess Sweeney",52,"558777986","788164464","ac@icloud.net",0),
   ("BarclaysFuller", "../images/profilePic.png",".zk3&GR7!","Barclays Fuller",16,"526666648","758831529","suspendisse.commodo@icloud.com",0),
   ("EleanorsDurham", "../images/profilePic.png","f.57d:w*PM","Eleanors Durham",87,"374645447","478614175","turpis@hotmail.couk",0),
-  ("IgnaciasAdkins", "../images/profilePic.png",">{xWwcNH8","Ignacias Adkins",44,"375427669","736499485","fermentum@protonmail.couk",0),
+  ("IgnaciasMairi", "../images/profilePic.png",">{xWwcNH8","Ignacias Mairi",44,"375427669","736499485","fermentum@protonmail.couk",0),
   ("EmeraldsHopper", "../images/profilePic.png","8G@qQDhpn","Emeralds Hopper",67,"832437891","345281649","fringilla.cursus@outlook.org",0);
 
 INSERT INTO Pedido ('idRestaurant', 'idUser', 'state', 'delieverAddress', 'submissonDate','submissonHour')
