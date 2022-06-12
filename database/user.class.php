@@ -86,11 +86,12 @@
         }
 
         static function saveAddress(PDO $db, int $id, string $newAddress) {
-            $stmt = $db->prepare("INSERT INTO Addresses ('idUser', 'address')
-            VALUES ( ? , ? )"
-            );
-
-            $stmt->execute(array($id, $newAddress));
+            if ($newAddress != '') {
+                $stmt = $db->prepare("INSERT INTO Addresses ('idUser', 'address')
+                                VALUES ( ? , ? )"
+                                );
+                $stmt->execute(array($id, $newAddress));
+            }
         }
 
         static function registerUser(PDO $db, string $username, string $name, string $password) {

@@ -74,20 +74,21 @@
             <div class="both">
             <div class="new-address-div">
                 <button><img src="../images/plus-address.png" width=20> Add new address</button>
-                <form action=<?php echo "../actions/action_add_new_address.php" ?> method="post">
+                <form action=<?="../actions/action_add_new_address.php"?> method="post">
                     <p><label for="new-address">Insert your new address</label></p>
                     <input type="text" placeholder="New address" name="new-address" class="diactivated"></p>
                     <button type="submit" class="btn-save-changes">Save changes</button>
                 </form>
             </div>
             <div class="user-addresses">
+                <?php $userAddresses = Address::getUserAddresses($db, $user->id);?>
                 <?php foreach($userAddresses as $address) { ?>
                     <div class="user-address">
                         <div class="pd">
                             <small><?=$address->address?></small>
                             <div class="btns">
                                 <button type="button" class="btn-edit-address">Edit</button>
-                                <button type="button" class="btn-delete-address">Delete</button>
+                                <form action=<?="../actions/action_delete_address.php?addressId=" . $address->id?>><button type="button" class="btn-delete-address">Delete</button></form>
                             </div>
                         </div>
                     </div>

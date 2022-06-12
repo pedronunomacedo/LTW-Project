@@ -30,7 +30,7 @@
         else if ($plate->category == 'coldDrink' or $plate->category == 'hotDrink' or $plate->category == 'drinks') {
             $drinks[] = $plate;
         }
-        else if ($plate->category == 'dessert') {
+        else if ($plate->category == 'desserts') {
             $desserts[] = $plate;
         }
         else {
@@ -44,7 +44,7 @@
             <?php
                 if (sizeof($foodPlates) > 0) {
                     foreach($foodPlates as $plate) {
-                        if ($plate->category == 'pizza') { ?>
+                        if ($plate->category == 'pizza' ) { ?>
                             <article>
                                 <section class="restaurant_plate_image">
                                     <img src="https://api.lorem.space/image/pizza?w=150&h=150">

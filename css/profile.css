@@ -49,7 +49,8 @@
 }
 
 .user-address {
-    height: 50%;
+    width: 180%;
+    height: 30%;
     border: 2px solid #cccccc;
     margin-bottom: 1em;
 }

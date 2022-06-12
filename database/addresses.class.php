@@ -13,8 +13,8 @@
         }
 
         static function getUserAddresses(PDO $db, int $id) : array {
-            $stmt = $db->prepare("SELECT * FROM Addresses WHERE idUser = " . $id);
-            $stmt->execute();
+            $stmt = $db->prepare("SELECT * FROM Addresses WHERE idUser = ?");
+            $stmt->execute(array($id));
 
             $userAddresses = array();
             
