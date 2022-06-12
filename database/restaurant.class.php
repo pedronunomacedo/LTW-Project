@@ -50,7 +50,7 @@
         }
 
         static function getCategoryRestaurants(PDO $db, string $category) : array {
-            $stmt = $db->prepare('SELECT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
+            $stmt = $db->prepare('SELECT DISTINCT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
                                 FROM Restaurant, Plate 
                                 WHERE (Plate.category = ? AND Plate.idRestaurant = Restaurant.id)');
             $stmt->execute(array($category));

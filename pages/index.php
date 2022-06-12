@@ -57,19 +57,18 @@
     <section class="most-popular-plates">
         <div class="mini-title">
             <h1>Another plates</h1>
-            <a href="popularPlates.php">See all</a>
+            <a href="allPlates.php">See all</a>
         </div>
         <div class="group">
-        <?php
-            $category = "burger";
-            $restaurants = Plate::getCategoryPlates($db, $category);
-            $i = 0;
-            foreach ($restaurants as $restaurant) {
-                if ($i == 3) break;
-                drawPlate($restaurant);
-                $i++;
-            }
-        ?>
+            <?php
+                $plates = Plate::getAllPlates($db);
+                $i = 0;
+                foreach ($plates as $plate) {
+                    if ($i == 3) break;
+                    drawPlate($plate);
+                    $i++;
+                }
+            ?>
         </div>
     </section>
     
