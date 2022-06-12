@@ -24,10 +24,10 @@
     <?php $foodPlates = array(); $drinks = array(); $desserts = array(); $extras = array();
 
     foreach ($plates as $plate) {
-        if ($plate->category == 'pizza' or $plate->category == 'sushi' or $plate->category == 'burger') {
+        if ($plate->category == 'pizza' or $plate->category == 'sushi' or $plate->category == 'burgers' or $plate->category == 'sandwiches' or $plate->category == 'hot-dogs' or $plate->category == 'fried' or $plate->category == 'vegetarian' or $plate->category == 'mexican' or $plate->category == 'portuguese' or $plate->category == 'soups') {
             $foodPlates[] = $plate;
         }
-        else if ($plate->category == 'coldDrink' or $plate->category == 'hotDrink' or $plate->category == 'drink') {
+        else if ($plate->category == 'coldDrink' or $plate->category == 'hotDrink' or $plate->category == 'drinks') {
             $drinks[] = $plate;
         }
         else if ($plate->category == 'dessert') {
@@ -53,7 +53,7 @@
                                 <p><?=$plate->name?></p>
                             </article>
                         <?php }
-                        else if ($plate->category == 'burger') { ?>
+                        else if ($plate->category == 'burgers') { ?>
                             <article>
                                 <section class="restaurant_plate_image">
                                     <img src="https://api.lorem.space/image/burger?w=150&h=150">
