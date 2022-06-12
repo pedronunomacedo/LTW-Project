@@ -10,10 +10,12 @@
         <?php
             foreach ($categoryRestaurants as $restaurant) { ?>
                 <div class="column">
-                    <div class="items">
-                        <img src="https://api.lorem.space/image/house?w=150&h=150">
-                        <p><?=$restaurant->name?></p>
-                    </div>
+                    <a href=<?="../pages/restaurant.php?id=" . $restaurant->id?>>
+                        <div class="items">
+                            <img src="https://api.lorem.space/image/house?w=150&h=150">
+                            <p><?=$restaurant->name?></p>
+                        </div>
+                    </a>
                 </div>
             <?php }
         ?>
