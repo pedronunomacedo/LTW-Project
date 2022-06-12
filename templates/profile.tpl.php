@@ -9,22 +9,30 @@
 <?php function drawTitles() { ?>
     <div class="max">
     <div class="main-titles">
-        <div class="my-profile flex">
-            <i class="material-icons">assignment_ind</i>
-            <small>My Profile</small>
-        </div>
-        <div class="my-addresses flex">
-            <i class="material-icons">place</i>
-            <small>My Addresses</small>
-        </div>
-        <div class="my-orders flex">
-            <i class="material-icons">business_center</i>
-            <small>My Orders</small>
-        </div>
-        <div class="my-favorites flex">
-            <i class="material-icons">star</i>
-            <small>My Favorites</small>
-        </div>
+        <a href="javascript:void(0)" onclick="new_func(1)">
+            <div class="my-profile flex">
+                <i class="material-icons">assignment_ind</i>
+                <button type="button" class="ttl-btn" id="prof-btn" onclick="new_func(1)">My Profile</button>
+            </div>
+        </a>
+        <a href="javascript:void(0)" onclick="new_func(2)">
+            <div class="my-addresses flex">
+                <i class="material-icons">place</i>
+                <button type="button" class="ttl-btn" id="addr-btn" onclick="new_func(2)">My Adresses</button>
+            </div>
+        </a>
+        <a href="javascript:void(0)" onclick="new_func(3)">
+            <div class="my-orders flex">
+                <i class="material-icons">business_center</i>
+                <button type="button" class="ttl-btn" id="order-btn" onclick="new_func(3)">My Orders</button>
+            </div>
+        </a>
+        <a href="javascript:void(0)" onclick="new_func(4)">
+            <div class="my-favorites flex">
+                <i class="material-icons">star</i>
+                <button type="button" class="ttl-btn" id="fav-btn" onclick="new_func(4)">My Favorites</button>
+            </div>
+        </a>
     </div>
 <?php } ?>
 
@@ -40,7 +48,7 @@
     //$client = $user->client;
 
     ?>
-    <div class="my-profile-section center show">
+    <div class="my-profile-div center show" id="my-profile-div">
         <div class="change-info">
         <div>
             <img src="<?=$userProfilePic?>" width=150>
@@ -62,7 +70,7 @@
         </div>
         </div>
     </div>
-    <div class="my-addresses-section center hidden">
+    <div class="my-addresses-div center hidden" id="my-addresses-div">
         <div class="both">
         <div class="new-address-div">
             <button><img src="../images/plus-address.png" width=20> Add new address</button>
@@ -88,7 +96,7 @@
         </div>
     </div>
 
-    <div class="my-orders-div center hidden">
+    <div class="my-orders-div center hidden" id="my-orders-div">
         <?php foreach ($userOrders as $order) { ?>
             <?php $restaurantName = Restaurant::getRestaurantName($db, intval($order->idRestaurant)); ?>
             <div class="user-order">
@@ -98,7 +106,7 @@
         <?php } ?>
     </div>
 
-    <div class="my-favorites-div center hidden">
+    <div class="my-favorites-div center hidden" id="my-favorites-div">
         <div class="name">
         <?php foreach ($favoriteRestaurants as $favorite) { ?>
             <?php $restaurantName = Restaurant::getRestaurantName($db, intval($favorite->idRestaurant)); ?>
