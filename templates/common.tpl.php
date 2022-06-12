@@ -3,7 +3,6 @@
     include_once(__DIR__ . '/../templates/common.tpl.php');
 ?>
 <link rel="stylesheet" href="../css/index.css"> <!-- Style of the header and the footer -->
-<link rel="stylesheet" href="../css/style.css">
 <?php function drawHeader(Session $session) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -59,8 +58,8 @@
 
 <?php function drawLoginForm() { ?>
     <div class="login">
-        <form action="../actions/action_login.php" method="post" class="login">
-            <button type="submit"><a href="../pages/login.php">Login / Register</a></button>
+        <form action="../actions/action_login.php" method="post" class="login_form">
+            <button type="submit" class="btn"><a href="../pages/login.php">Login / Register</a></button>
         </form>
     </div>
 <?php } ?>
@@ -77,7 +76,7 @@
 <?php function drawCategoryMenu() { ?>
     <div class = "scroll_menu">
         <div class = "scroll2">
-            <a href = "../pages/category.php?category=burger">Burgers</a>
+            <a href = "../pages/category.php?category=burgers">Burgers</a>
             <a href = "../pages/category.php?category=pizza">Pizza</a>
             <a href = "../pages/category.php?category=sandwiches">Sandwiches</a>
             <a href = "../pages/category.php?category=hot-dogs">Hot-Dogs</a>
@@ -87,7 +86,6 @@
             <a href = "../pages/category.php?category=vegetarian">Vegetarian</a>
             <a href = "../pages/category.php?category=mexican">Mexican</a>
             <a href = "../pages/category.php?category=portuguese">Portuguese</a>
-            <a href = "../pages/category.php?category=ice-cream">Ice-Cream</a>
             <a href = "../pages/category.php?category=drinks">Drinks</a>
             <a href = "../pages/category.php?category=desserts">Desserts</a>
         </div>

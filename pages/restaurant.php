@@ -15,7 +15,7 @@
   
   $restaurant = Restaurant::getRestaurant($db, intval($_GET['id']));
   $plates = Plate::getRestaurantPlates($db, intval($_GET['id']));
-  
+
   drawHeader($session);
   drawRestaurant($db, $restaurant, $plates);
   drawFooter();

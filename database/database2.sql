@@ -57,8 +57,7 @@ CREATE TABLE Plate (
     idRestaurant integer REFERENCES Restaurant (id),
     name VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
-    price VARCHAR(6) NOT NULL,
-    grade integer
+    price VARCHAR(6) NOT NULL
 );
 
 CREATE TABLE Addresses(
@@ -141,13 +140,13 @@ VALUES
 INSERT INTO Plate ('idRestaurant', 'name', 'category', 'price')
 VALUES
   (6, "Pepper's Pizza", "pizza", "5.23"),
-  (2, "Cheeseburger", "burger", "4.50"),
-  (4, "Meat Lover Burguer", "burger", "7.99"),
+  (2, "Cheeseburger", "burgers", "4.50"),
+  (4, "Meat Lover Burguer", "burgers", "7.99"),
   (6, "Extra Cheese Pizza", "pizza", "4.99"),
-  (1, "Seaside Sandwich", "burger", "5.00"),
-  (3, "Coca-Cola", "coldDrink", "1.88"),
-  (8, "Mousse de chocolate", "dessert", "1.79"),
-  (8, "Palito de limão", "dessert", "1.20"),
+  (1, "Seaside Sandwich", "burgers", "5.00"),
+  (3, "Coca-Cola", "drinks", "1.88"),
+  (8, "Mousse de chocolate", "desserts", "1.79"),
+  (8, "Palito de limão", "desserts", "1.20"),
   (9, "Feijoada", "extras", "0.99"),
   (10, "Francesinha", "extras", "2.15"),
   (8, "Sushi", "sushi", "8.99");

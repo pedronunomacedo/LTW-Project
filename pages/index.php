@@ -19,11 +19,11 @@
     <section class="best-burgers">
         <div class="mini-title">
             <h1>The most popular Hamburguer options</h1>
-            <a href="category.php?category=burger">See all</a>
+            <a href="category.php?category=burgers">See all</a>
         </div>
         <div class="group">
             <?php
-                $category = "burger";
+                $category = "burgers";
                 $restaurants = Restaurant::getCategoryRestaurants($db, $category);
                 $i = 0;
                 foreach ($restaurants as $restaurant) {
