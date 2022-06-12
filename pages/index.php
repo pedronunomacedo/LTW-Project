@@ -23,7 +23,7 @@
         </div>
         <div class="group">
             <?php
-                $category = "burger";
+                $category = "burgers";
                 $restaurants = Restaurant::getCategoryRestaurants($db, $category);
                 $i = 0;
                 foreach ($restaurants as $restaurant) {

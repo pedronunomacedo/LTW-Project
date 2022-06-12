@@ -16,7 +16,7 @@
         }
 
         static function getRestaurant(PDO $db, int $id) : Restaurant {
-            $stmt = $db->prepare('SELECT * FROM Restaurant WHERE id = ?');
+            $stmt = $db->prepare('SELECT DISTINCT * FROM Restaurant WHERE id = ?');
             $stmt->execute(array($id));
 
             $restaurant = $stmt->fetch();
@@ -31,7 +31,7 @@
         }
 
         static function getAllRestaurants(PDO $db) : array {
-            $stmt = $db->prepare('SELECT * FROM Restaurant');
+            $stmt = $db->prepare('SELECT DISTINCT * FROM Restaurant');
             $stmt->execute();
 
             $allRestaurants = array();
@@ -50,7 +50,7 @@
         }
 
         static function getCategoryRestaurants(PDO $db, string $category) : array {
-            $stmt = $db->prepare('SELECT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
+            $stmt = $db->prepare('SELECT DISTINCT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
                                 FROM Restaurant, Plate 
                                 WHERE (Plate.category = ? AND Plate.idRestaurant = Restaurant.id)');
             $stmt->execute(array($category));
@@ -71,7 +71,7 @@
         }
 
         static function getRestaurantName(PDO $db, int $id) : string{
-            $stmt = $db->prepare("SELECT Restaurant.name FROM Restaurant WHERE id = ?");
+            $stmt = $db->prepare("SELECT DISTINCT Restaurant.name FROM Restaurant WHERE id = ?");
             $stmt->execute(array($id));
 
             $restaurant = $stmt->fetch();
