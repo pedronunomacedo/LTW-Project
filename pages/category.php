@@ -8,6 +8,7 @@
   require_once(__DIR__ . '/../utils/session.php');
 ?>
   <link rel="stylesheet" href="../css/common.css"> <!-- Style of the header and the footer -->
+  <link rel="stylesheet" href="../css/category.css"> <!-- Style of the main body -->
 <?php
   $session = new Session();
 

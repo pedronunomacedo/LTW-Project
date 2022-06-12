@@ -47,8 +47,8 @@
                         The email is invalid
                     </div>
                     <div class="form-group was-validated">
-                        <input type="text" id="email_register" name="email_register" class="form-control form-control-filled" required pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" autocorrect="off" autocomplete="off" autocapitalize="off">
-                        <label for="email_register" class="form-control-label">Insert your email</label>
+                        <input type="text" id="name_reg" name="name_reg" class="form-control form-control-filled" required autocorrect="off" autocomplete="off" autocapitalize="off">
+                        <label for="name_reg" class="form-control-label">Insert your name</label>
                     </div>
                     <button type="button" id="cnt-btn" class="btn btn-primary btn-lg btn-block sign-up-button" onclick="changeRegister()">Continue</button>
                     <div class="form-group was-validated" id="after1">
