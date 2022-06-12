@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="profilePic.css">
+<link rel="stylesheet" href="../profile.css">
 
 <div class="box">
     <label class="avatar" for="btn">

@@ -43,7 +43,7 @@
                 intval($user['nif']),
                 intval($user['phone']),
                 $user['address'],
-                $user['client']
+                intval($user['client'])
             );
         }
 

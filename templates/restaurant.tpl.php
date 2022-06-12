@@ -150,13 +150,9 @@
 <?php } ?>
 
 <?php function restaurantDiv(Restaurant $restaurant) { ?>
-    <div class="row">
-        <a href=<?="../pages/restaurant.php?id=" . $restaurant->id?>>
-            <section class="restaurant-div">
-                <img src="../images/restaurantImg.png">
-                <p><?=$restaurant->name?></p>
-            </section>
-        </a>
+    <div class="plate">
+        <a href=<?php echo "../pages/restaurant.php?id=" . $restaurant->id?>><img src="../images/restaurantImg.png"></a>
+        <p><?=$restaurant->name?></p>
     </div>
 <?php } ?>
 
