@@ -30,7 +30,6 @@
 
         static function getUser(PDO $db, int $id) : User {
             $stmt = $db->prepare("SELECT * FROM User WHERE id = ?");
-
             $stmt->execute(array($id));
             $user = $stmt->fetch();
 
@@ -44,7 +43,7 @@
                 intval($user['nif']),
                 intval($user['phone']),
                 $user['address'],
-                intval($user['client'])
+                $user['client']
             );
         }
 
@@ -92,6 +91,28 @@
             );
 
             $stmt->execute(array($id, $newAddress));
+        }
+
+        static function registerUser(PDO $db, string $username, string $name, string $password) {
+            $profilePic = '../images/profilePic.png';
+            $age = 10;
+            $nif = 123456789;
+            $phone = 938765421;
+            $address = '';
+            $client = 1;
+
+            $stmt = $db->prepare("INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client') 
+            VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ?)"
+            );
+            $stmt->execute(array($username, $profilePic, $password, $name, $age, $nif, $phone, $address, $client));
+        }
+
+        static function userIsClient(PDO $db, int $userId) : int {
+            $stmt = $db->prepare("SELECT client FROM User WHERE id = " . $userId);
+            $stmt->execute();
+            $client = $stmt->fetch();
+
+            return $client['client'];
         }
     }
 ?>

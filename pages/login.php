@@ -6,7 +6,6 @@
 ?>
     <link rel="stylesheet" href="../css/common.css"> <!-- Style of the header and the footer -->
     <link rel="stylesheet" href="../css/login.css"> <!-- Style of the login/register page -->
-    <script src="../js/main.js"></script>
 <?php
     $session = new Session();
 
@@ -16,7 +15,7 @@
 
     ?> 
     <div class="box d-block"> 
-        <header class="auth">Authentication</header> 
+        <p class="auth">Authentication</p> 
         <div class="both"> <?php
             drawLoginSection();
             drawRegisterSection();

@@ -102,15 +102,62 @@ function throttle(cb, delay = 1000) {
     }
 }
 
-function changeRegister() {
-    if (document.getElementById('email_register').checkValidity()) {
-        document.getElementById('erur').style.display = "none"
-        document.getElementById('new-text').style.display = "none"
-        document.getElementById('cnt-btn').style.display = "none"
-        document.getElementById('after1').style.display = "block"
-        document.getElementById('after2').style.display = "block"
-        document.getElementById('after3').style.display = "block"
-        document.getElementById('after4').style.display = "block"
-        delete document.getElementById('reg-form').onclick
+// function changeRegister() {
+//     if (document.getElementById('email_register').checkValidity()) {
+//         document.getElementById('erur').style.display = "none"
+//         document.getElementById('new-text').style.display = "none"
+//         document.getElementById('cnt-btn').style.display = "none"
+//         document.getElementById('after1').style.display = "block"
+//         document.getElementById('after2').style.display = "block"
+//         document.getElementById('after3').style.display = "block"
+//         document.getElementById('after4').style.display = "block"
+//         document.getElementById('after5').style.display = "block"
+//         document.getElementById('after6').style.display = "block"
+//         document.getElementById('after7').style.display = "block"
+//         document.getElementById('after8').style.display = "block"
+//         document.getElementById('after9').style.display = "block"
+//     }
+// }
+
+function new_func(num) {
+    if (num == 1) {
+        document.getElementById('my-profile-div').style.display = "flex";
+        document.getElementById('my-addresses-div').style.display = "none";
+        document.getElementById('my-orders-div').style.display = "none";
+        document.getElementById('my-favorites-div').style.display = "none";
+        document.getElementById('prof-btn').style.fontWeight = "bold";
+        document.getElementById('addr-btn').style.fontWeight = "normal";
+        document.getElementById('order-btn').style.fontWeight = "normal";
+        document.getElementById('fav-btn').style.fontWeight = "normal";
+    }
+    else if (num == 2) {
+        document.getElementById('my-profile-div').style.display = "none";
+        document.getElementById('my-addresses-div').style.display = "flex";
+        document.getElementById('my-orders-div').style.display = "none";
+        document.getElementById('my-favorites-div').style.display = "none";
+        document.getElementById('prof-btn').style.fontWeight = "normal";
+        document.getElementById('addr-btn').style.fontWeight = "bold";
+        document.getElementById('order-btn').style.fontWeight = "normal";
+        document.getElementById('fav-btn').style.fontWeight = "normal";
+    }
+    else if (num == 3) {
+        document.getElementById('my-profile-div').style.display = "none";
+        document.getElementById('my-addresses-div').style.display = "none";
+        document.getElementById('my-orders-div').style.display = "flex";
+        document.getElementById('my-favorites-div').style.display = "none";
+        document.getElementById('prof-btn').style.fontWeight = "normal";
+        document.getElementById('addr-btn').style.fontWeight = "normal";
+        document.getElementById('order-btn').style.fontWeight = "bold";
+        document.getElementById('fav-btn').style.fontWeight = "normal";
+    }
+    else if (num == 4) {
+        document.getElementById('my-profile-div').style.display = "none";
+        document.getElementById('my-addresses-div').style.display = "none";
+        document.getElementById('my-orders-div').style.display = "none";
+        document.getElementById('my-favorites-div').style.display = "flex";
+        document.getElementById('prof-btn').style.fontWeight = "normal";
+        document.getElementById('addr-btn').style.fontWeight = "normal";
+        document.getElementById('order-btn').style.fontWeight = "normal";
+        document.getElementById('fav-btn').style.fontWeight = "bold";
     }
 }
