@@ -88,7 +88,9 @@
                             <small><?=$address->address?></small>
                             <div class="btns">
                                 <button type="button" class="btn-edit-address">Edit</button>
-                                <form action=<?="../actions/action_delete_address.php?addressId=" . $address->id?>><button type="button" class="btn-delete-address">Delete</button></form>
+                            <form action="../actions/action_delete_address.php" method="post">
+                                <button type="submit" name="addressId" class="btn-delete-address">Delete</button>
+                            </form>
                             </div>
                         </div>
                     </div>

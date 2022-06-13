@@ -7,16 +7,16 @@
     require_once(__DIR__ . '/../utils/session.php');
     require_once(__DIR__ . '/../templates/profile.tpl.php');
     $session = new Session();
-?>
-    <script src="../js/action_edit_profile.tpl.js"></script>
-<?php
 
     if (!$session->isLoggedIn()) die(header('Location: /'));
 
-    $addressId = $_GET['addressId'];
+    $addressId = $_POST['addressId'];
+    echo 'aaaaa' . $addressId;
 
     $db = getDatabaseConnection();
-    $db->prepare("DELETE FROM Addresses WHERE id = " . $addressId);
+    $result = $db->prepare("DELETE FROM Addresses WHERE id = :addressId");
+    $result->bindParam(':addressId', $addressId);
+    $result->execute();
 
-    header('Location: ../pages/profile.php?userId=' . $session->getId());
+    //header('Location: ../pages/profile.php?userId=' . $session->getId());
 ?>
