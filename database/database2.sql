@@ -73,23 +73,29 @@ CREATE TABLE Favorites(
   idRestaurant references Restaurant(id)
 );
 
+CREATE TABLE Orders(
+  id integer PRIMARY KEY AUTOINCREMENT,
+  idUser references User(id),
+  idPlate references Restaurant(id)
+);
+
 /* Povoate */
 
 INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client')
 VALUES
   ("DentonPitts", "../images/profilePic.png","@v{6Tr(~Rj","Denton Pitts",61,"368678646","253155521","sit.ametee@icloud.net",0),
-  ("AspenWalters", "../images/profilePic.png","#8E=TC6+tC","Aspen Walters",72,"374287783","475788662","amet.ultriciess.sem@yahoo.org",1),
+  ("AspenWalters", "../images/profilePic.png","#8E=TC6+tC","Aspen Walters",72,"374287783","475788662","amet.ultriciess.sem@yahoo.org",0),
   ("JamesonGreene", "../images/profilePic.png","-36Z?paU-(","Jameson Greene",68,"349435629","285844453","nuncc@icloud.edu",0),
-  ("ImaCarpenter", "../images/profilePic.png","YN9K.p'der","Ima Carpenter",18,"316523367","138734174","eratt@icloud.net",1),
+  ("ImaCarpenter", "../images/profilePic.png","YN9K.p'der","Ima Carpenter",18,"316523367","138734174","eratt@icloud.net",0),
   ("GailMarks", "../images/profilePic.png","nT%_2t4M","Gail Marks",65,"654456174","415659579","sollicitudinn.commodo@google.com",0),
-  ("UlyssesPete", "../images/profilePic.png","MdL}Y;2XN","Ulysses Pete",52,"558777981","788164465","acc@icloud.net",1),
+  ("UlyssesPete", "../images/profilePic.png","MdL}Y;2XN","Ulysses Pete",52,"558777981","788164465","acc@icloud.net",0),
   ("BarclayCoupper", "../images/profilePic.png","^@9XZeyT$q","Barclay Coupper",16,"526666647","758831526","suspendissee.commodo@icloud.com",0),
-  ("EleanorDurham", "../images/profilePic.png","vYdsq4y*3b","Eleanor Durham",87,"374645444","478614177","turpiss@hotmail.couk",1),
+  ("EleanorDurham", "../images/profilePic.png","vYdsq4y*3b","Eleanor Durham",87,"374645444","478614177","turpiss@hotmail.couk",0),
   ("IgnaciaAdkins", "../images/profilePic.png","v!X)Tz522","Ignacia Adkins",44,"375427668","736499488","fermentumm@protonmail.couk",0),
-  ("EmeraldHopper", "../images/profilePic.png","cQ)@UMr4Bv","Emerald Hopper",67,"832437898","345281648","fringillaa.cursus@outlook.org",1),
-  ("DentonsSalt", "../images/profilePic.png","cDYh+@8Yw","Dentons Salt",61,"368678641","253155529","sit.amete@icloud.net",0),
+  ("EmeraldHopper", "../images/profilePic.png","cQ)@UMr4Bv","Emerald Hopper",67,"832437898","345281648","fringillaa.cursus@outlook.org",0),
+  ("DentonsSalt", "../images/profilePic.png","cDYh+@8Yw","Dentons Salt",61,"368678641","253155529","sit.amete@icloud.net",1),
   ("AspensSmith", "../images/profilePic.png","aNB~3Xhp~B","Aspens Smith",72,"374287782","475788661","amet.ultricies.sem@yahoo.org",1),
-  ("JamesonsBlue", "../images/profilePic.png","Rt~E43Mf","Jamesons Blue",68,"349435623","285844452","nunc@icloud.edu",0),
+  ("JamesonsBlue", "../images/profilePic.png","Rt~E43Mf","Jamesons Blue",68,"349435623","285844452","nunc@icloud.edu",1),
   ("SophiesCalenski", "../images/profilePic.png","nTjH;&(s8;","Sophies Calenski",18,"316523364","138734173","erat@icloud.net",1),
   ("GailsHupkins", "../images/profilePic.png","K8/~(BvGhG","Gails Hupkins",65,"654456175","415659574","sollicitudin.commodo@google.com",1),
   ("UlyssessSweeney", "../images/profilePic.png","{s9[pSZN%w","Ulyssess Sweeney",52,"558777986","788164464","ac@icloud.net",1),

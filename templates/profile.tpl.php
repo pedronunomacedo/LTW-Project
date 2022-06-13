@@ -15,12 +15,23 @@
                     <button type="button" class="ttl-btn" id="prof-btn" onclick="new_func(1)">My Profile</button>
                 </div>
             </a>
-            <a href="javascript:void(0)" onclick="new_func(2)">
-                <div class="my-addresses flex">
-                    <i class="material-icons">place</i>
-                    <button type="button" class="ttl-btn" id="addr-btn" onclick="new_func(2)">My Adresses</button>
-                </div>
-            </a>
+            <?php if (1 == 1) { ?> <!-- User is a client -->
+                <a href="javascript:void(0)" onclick="new_func(2)">
+                    <div class="my-addresses flex">
+                        <i class="material-icons">place</i>
+                        <button type="button" class="ttl-btn" id="addr-btn" onclick="new_func(2)">My Adresses</button>
+                    </div>
+                </a>
+            <?php }
+            else { ?>
+                <a href="javascript:void(0)" onclick="new_func(2)">
+                    <div class="my-addresses flex">
+                        <i class="material-icons">building</i>
+                        <button type="button" class="ttl-btn" id="addr-btn" onclick="new_func(2)">My Restaurats</button>
+                    </div>
+                </a>
+            <?php } ?>
+                
             <a href="javascript:void(0)" onclick="new_func(3)">
                 <div class="my-orders flex">
                     <i class="material-icons">business_center</i>
@@ -70,47 +81,54 @@
             </div>
             </div>
         </div>
-        <div class="my-addresses-div center hidden" id="my-addresses-div">
-            <div class="both">
-            <div class="new-address-div">
-                <button><img src="../images/plus-address.png" width=20> Add new address</button>
-                <form action=<?="../actions/action_add_new_address.php"?> method="post">
-                    <p><label for="new-address">Insert your new address</label></p>
-                    <input type="text" placeholder="New address" name="new-address" class="diactivated"></p>
-                    <button type="submit" class="btn-save-changes">Save changes</button>
-                </form>
-            </div>
-            <div class="user-addresses" id="novo">
-                <?php $userAddresses = Address::getUserAddresses($db, $user->id);?>
-                <?php foreach($userAddresses as $address) { ?>
-                    <div class="user-address" id="selam<?=$address->id?>">
-                        <div class="pd">
-                            <small><?=$address->address?></small>
-                            <div class="btns">
-                                <button type="button" class="btn-edit-address" onclick="function()">Edit</button>
-                                <input type="submit" class="butuns" name="insert" value="Delete"/>
-                            </div>
+        <?php 
+            $user = User::getUser($db, $user->id);
+            if (1 == 1) { ?> <!-- User it's a client -->
+                <div class="my-addresses-div center hidden" id="my-addresses-div">
+                    <div class="both">
+                        <div class="new-address-div">
+                            <button><img src="../images/plus-address.png" width=20> Add new address</button>
+                            <form action=<?="../actions/action_add_new_address.php"?> method="post">
+                                <p><label for="new-address">Insert your new address</label></p>
+                                <input type="text" placeholder="New address" name="new-address" class="diactivated"></p>
+                                <button type="submit" class="btn-save-changes">Save changes</button>
+                            </form>
+                        </div>
+                        <div class="user-addresses" id="novo">
+                            <?php $userAddresses = Address::getUserAddresses($db, $user->id);?>
+                            <?php foreach($userAddresses as $address) { ?>
+                                <div class="user-address" id="selam<?=$address->id?>">
+                                    <div class="pd">
+                                        <small><?=$address->address?></small>
+                                        <div class="btns">
+                                            <button type="button" class="btn-edit-address" onclick="function()">Edit</button>
+                                            <input type="submit" class="butuns" name="insert" value="Delete"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(document).ready(function(){
+                                        $('.butuns').click(function(){
+                                            var clickBtnValue = $(this).val();
+                                            var ajaxurl = '../actions/action_delete_address.php?id='+<?=$address->id?>;
+                                            data =  {'action': clickBtnValue};
+                                            $.post(ajaxurl, data, function (response) {
+                                                // Response div goes here.
+                                                //document.getElementById("selam<?=$address->id?>").remove();
+                                                var elem = document.getElementById("selam<?=$address->id?>");
+                                                elem.remove();
+                                            });
+                                        });
+                                    });
+                                </script>
+                            <?php } ?>
                         </div>
                     </div>
-                    <script>
-                        $(document).ready(function(){
-                            $('.butuns').click(function(){
-                                var clickBtnValue = $(this).val();
-                                var ajaxurl = '../actions/action_delete_address.php?id='+<?=$address->id?>;
-                                data =  {'action': clickBtnValue};
-                                $.post(ajaxurl, data, function (response) {
-                                    // Response div goes here.
-                                    //document.getElementById("selam<?=$address->id?>").remove();
-                                    var elem = document.getElementById("selam<?=$address->id?>");
-                                    elem.remove();
-                                });
-                            });
-                        });
-                    </script>
-                <?php } ?>
-            </div>
-            </div>
-        </div>
+                </div>
+            <?php }
+            else { ?> <!-- User it's not a client (owner) -->
+                
+            <?php } ?>
 
         <div class="my-orders-div center hidden" id="my-orders-div">
             <?php foreach ($userOrders as $order) { ?>

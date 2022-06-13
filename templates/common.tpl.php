@@ -68,7 +68,7 @@
 
 <?php function drawUsernameForm(Session $session) { ?>
     <div class="username-div">
-        <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 35px;"></i>
+        <a href="../pages/shoppingCart.php"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 35px;"></i></a>
         <div class="img-name">
             <i class="material-icons" style="font-size: 30px;">account_circle</i>
             <a href=<?="../pages/profile.php?userId=" . $session->getId()?> class="user-name"><?=$session->getName()?></a>

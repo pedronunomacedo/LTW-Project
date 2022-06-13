@@ -27,7 +27,6 @@
         $userAddresses = Address::getUserAddresses($db, $user->id);
         $userOrders = Pedido::getUserOrders($db, $user->id);
         $favoriteUserRestaurants = Favorite::getUserFavoriteRestaurants($db, $user->id);
-        echo '$user->name = ' . $user->name . ' | $user->username = ' . $user->username . ' | $user->phone = ' . $user->phone;
         drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants);
     }
 
