@@ -3,6 +3,7 @@
 }
 
 body {
+    position: relative;
     background-color: #f3f3f3;
     font-family: Bahnschrift, serif;
 }
@@ -82,7 +83,8 @@ header {
 }
 
 footer {
-    margin-top: 1em;
+    width: 100%;
+    margin-top: 10em;
 }
 
 .all-content {
@@ -120,4 +122,29 @@ footer {
 .back-top a, .ft-txt a {
     text-decoration: none;
     color: white;
+}
+
+.scroll_menu {
+    border-bottom: 1px solid #cccccc;
+}
+
+.scroll2 {
+    display: flex;
+    justify-content: center;
+}
+
+.category-name {
+    flex-grow: 1;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.category-name a {
+    text-decoration: none;
+    color: black;
+}
+
+.category-name:hover {
+    background-color: #cccccc;
 }

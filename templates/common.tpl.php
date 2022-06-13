@@ -1,8 +1,8 @@
 <?php
     declare(strict_types = 1);
-    
+    include_once(__DIR__ . '/../templates/common.tpl.php');
 ?>
-
+<link rel="stylesheet" href="../css/index.css"> <!-- Style of the header and the footer -->
 <?php function drawHeader(Session $session) { ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -34,6 +34,7 @@
                 else drawLoginForm();
             ?>
         </header>
+        <?php drawCategoryMenu(); ?>
     <main>
 <?php } ?>
 
@@ -45,7 +46,6 @@
             <div class="ft-txt">
                 <a href="contact.html">Contacts</a>
                 <a href="about.html">About Us</a>
-                <a href="//livroreclamacoes.pt/">Complaints</a>
             </div>
             <div class="back-top">
                 <a href="#">Back to top</a>
@@ -69,6 +69,26 @@
         <div class="img-name">
             <i class="material-icons">account_circle</i>
             <a href=<?="../pages/profile.php?userId=" . $session->getId()?> class="user-name"><?=$session->getName()?></a>
+        </div>
+    </div>
+<?php } ?>
+
+<?php function drawCategoryMenu() { ?>
+    <div class = "scroll_menu">
+        <div class = "scroll2">
+        <div class="category-name"><a href = "../pages/category.php?category=burger">Burgers</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=pizza">Pizza</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=sandwiches">Sandwiches</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=hot-dogs">Hot-Dogs</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=sushi">Sushi</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=soups">Soups</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=fried">Fried</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=vegetarian">Vegetarian</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=mexican">Mexican</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=portuguese">Portuguese</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=ice-cream">Ice-Cream</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=drinks">Drinks</a></div>
+            <div class="category-name"><a href = "../pages/category.php?category=desserts">Desserts</a></div>
         </div>
     </div>
 <?php } ?>

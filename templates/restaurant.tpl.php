@@ -24,13 +24,13 @@
     <?php $foodPlates = array(); $drinks = array(); $desserts = array(); $extras = array();
 
     foreach ($plates as $plate) {
-        if ($plate->category == 'pizza' or $plate->category == 'sushi' or $plate->category == 'burger') {
+        if ($plate->category == 'pizza' or $plate->category == 'sushi' or $plate->category == 'burgers' or $plate->category == 'sandwiches' or $plate->category == 'hot-dogs' or $plate->category == 'fried' or $plate->category == 'vegetarian' or $plate->category == 'mexican' or $plate->category == 'portuguese' or $plate->category == 'soups') {
             $foodPlates[] = $plate;
         }
-        else if ($plate->category == 'coldDrink' or $plate->category == 'hotDrink' or $plate->category == 'drink') {
+        else if ($plate->category == 'coldDrink' or $plate->category == 'hotDrink' or $plate->category == 'drinks') {
             $drinks[] = $plate;
         }
-        else if ($plate->category == 'dessert') {
+        else if ($plate->category == 'desserts') {
             $desserts[] = $plate;
         }
         else {
@@ -44,7 +44,7 @@
             <?php
                 if (sizeof($foodPlates) > 0) {
                     foreach($foodPlates as $plate) {
-                        if ($plate->category == 'pizza') { ?>
+                        if ($plate->category == 'pizza' ) { ?>
                             <article>
                                 <section class="restaurant_plate_image">
                                     <img src="https://api.lorem.space/image/pizza?w=150&h=150">
@@ -53,7 +53,7 @@
                                 <p><?=$plate->name?></p>
                             </article>
                         <?php }
-                        else if ($plate->category == 'burger') { ?>
+                        else if ($plate->category == 'burgers') { ?>
                             <article>
                                 <section class="restaurant_plate_image">
                                     <img src="https://api.lorem.space/image/burger?w=150&h=150">
@@ -150,11 +150,9 @@
 <?php } ?>
 
 <?php function restaurantDiv(Restaurant $restaurant) { ?>
-    <div class="row">
-        <section class="restaurant-div">
-            <img src="../images/restaurantImg.png">
-            <p><?=$restaurant->name?></p>
-        </section>
+    <div class="plate">
+        <a href=<?php echo "../pages/restaurant.php?id=" . $restaurant->id?>><img src="../images/restaurantImg.png"></a>
+        <p><?=$restaurant->name?></p>
     </div>
 <?php } ?>
 

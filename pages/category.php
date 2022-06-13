@@ -15,7 +15,6 @@
   $db = getDatabaseConnection();
 
   $category = $_GET['category'];
-
   $categoryRestaurants = Restaurant::getCategoryRestaurants($db, $category);
   
   drawHeader($session);

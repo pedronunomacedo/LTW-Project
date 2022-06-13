@@ -50,10 +50,10 @@
         }
 
         static function getCategoryRestaurants(PDO $db, string $category) : array {
-            $stmt = $db->prepare('SELECT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
-                                FROM Restaurant, Plate 
-                                WHERE (Plate.category = ? AND Plate.idRestaurant = Restaurant.id)');
-            $stmt->execute(array($category));
+            $stmt = $db->prepare("SELECT DISTINCT Restaurant.id, Restaurant.idUser, Restaurant.name, Restaurant.address, Restaurant.type
+                                FROM Restaurant,Plate 
+                                WHERE (Plate.category = '" . $category .  "' AND Plate.idRestaurant = Restaurant.id)");
+            $stmt->execute();
 
             $categoryRestaurants = array();
 
@@ -106,6 +106,25 @@
             $numClassifications = intval($stmt->fetch());
 
             return $numClassifications;
+        }
+
+        static function getProperRestaurants(PDO $db, int $userId) {
+            $stmt = $db->prepare('SELECT * FROM Restaurant WHERE Restaurant.idUser = ?');
+            $stmt->execute(array($userId));
+
+            $userRestaurants = array();
+
+            while ($restaurant = $stmt->fetch()) {
+                $userRestaurants[] = new Restaurant(
+                    $restaurant['id'],
+                    $restaurant['idUser'],
+                    $restaurant['name'],
+                    $restaurant['address'],
+                    $restaurant['type']
+                );
+            }
+
+            return $userRestaurants;
         }
 
         // static function getRestaurantComments(PDO $db, int $id) {

@@ -30,7 +30,6 @@
 
         static function getUser(PDO $db, int $id) : User {
             $stmt = $db->prepare("SELECT * FROM User WHERE id = ?");
-
             $stmt->execute(array($id));
             $user = $stmt->fetch();
 
@@ -78,20 +77,43 @@
         }
 
         function save($db) {
-            $stmt = $db->prepare('UPDATE User 
-                                SET name = ?, username = ? , phone = ? 
-                                WHERE id = ? '
-            );
+            $stmt = $db->prepare('UPDATE User SET name = ?,
+                                 username = ?,
+                                 phone = ?
+                                WHERE id = ?');
       
             $stmt->execute(array($this->name, $this->username, $this->phone, $this->id));
         }
 
         static function saveAddress(PDO $db, int $id, string $newAddress) {
-            $stmt = $db->prepare("INSERT INTO Addresses ('idUser', 'address')
-            VALUES ( ? , ? )"
-            );
+            if ($newAddress != '') {
+                $stmt = $db->prepare("INSERT INTO Addresses ('idUser', 'address')
+                                VALUES ( ? , ? )"
+                                );
+                $stmt->execute(array($id, $newAddress));
+            }
+        }
 
-            $stmt->execute(array($id, $newAddress));
+        static function registerUser(PDO $db, string $username, string $name, string $password) {
+            $profilePic = '../images/profilePic.png';
+            $age = 10;
+            $nif = 123456789;
+            $phone = 938765421;
+            $address = '';
+            $client = 1;
+
+            $stmt = $db->prepare("INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client') 
+            VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ?)"
+            );
+            $stmt->execute(array($username, $profilePic, $password, $name, $age, $nif, $phone, $address, $client));
+        }
+
+        static function userIsClient(PDO $db, int $userId) : int {
+            $stmt = $db->prepare("SELECT client FROM User WHERE id = " . $userId);
+            $stmt->execute();
+            $client = $stmt->fetch();
+
+            return $client['client'];
         }
     }
 ?>
