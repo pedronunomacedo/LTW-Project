@@ -59,7 +59,7 @@
 <?php function drawLoginForm() { ?>
     <div class="login">
         <form action="../actions/action_login.php" method="post" class="login_form">
-            <button type="submit" class="btn"><a href="../pages/login.php">Login / Register</a></button>
+            <button type="submit" class="btn"><a href="../pages/login.php?id=0">Login / Register</a></button>
         </form>
     </div>
 <?php } ?>
