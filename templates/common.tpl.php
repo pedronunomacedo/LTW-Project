@@ -7,6 +7,7 @@
     <!DOCTYPE html>
     <html lang="en">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,6 +59,7 @@
 
 <?php function drawLoginForm() { ?>
     <div class="login">
+        <i></i>
         <form action="../actions/action_login.php" method="post" class="login_form">
             <button type="submit" class="btn"><a href="../pages/login.php">Login / Register</a></button>
         </form>
@@ -66,8 +68,9 @@
 
 <?php function drawUsernameForm(Session $session) { ?>
     <div class="username-div">
+        <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 35px;"></i>
         <div class="img-name">
-            <i class="material-icons">account_circle</i>
+            <i class="material-icons" style="font-size: 30px;">account_circle</i>
             <a href=<?="../pages/profile.php?userId=" . $session->getId()?> class="user-name"><?=$session->getName()?></a>
         </div>
     </div>
@@ -76,7 +79,7 @@
 <?php function drawCategoryMenu() { ?>
     <div class = "scroll_menu">
         <div class = "scroll2">
-        <div class="category-name"><a href = "../pages/category.php?category=burger">Burgers</a></div>
+        <div class="category-name"><a href = "../pages/category.php?category=burgers">Burgers</a></div>
             <div class="category-name"><a href = "../pages/category.php?category=pizza">Pizza</a></div>
             <div class="category-name"><a href = "../pages/category.php?category=sandwiches">Sandwiches</a></div>
             <div class="category-name"><a href = "../pages/category.php?category=hot-dogs">Hot-Dogs</a></div>

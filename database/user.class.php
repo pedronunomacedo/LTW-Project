@@ -47,6 +47,19 @@
             );
         }
 
+        static function userExists(PDO $db, string $username) : int {
+            $stmt = $db->prepare("SELECT * FROM User WHERE username = ?");
+            $stmt->execute(array($username));
+            $result = $stmt->fetch();
+
+            if (!empty($result)) { // User exists
+                return 1;
+            }
+            else { // User does not exist
+                return 0;
+            }
+        }
+
         static function getUserByUsername(PDO $db, string $username) : User {
             $stmt = $db->query("SELECT * FROM User WHERE username = :username");
             $stmt->bindParam(':username', $username);
@@ -94,18 +107,11 @@
             }
         }
 
-        static function registerUser(PDO $db, string $username, string $name, string $password) {
-            $profilePic = '../images/profilePic.png';
-            $age = 10;
-            $nif = 123456789;
-            $phone = 938765421;
-            $address = '';
-            $client = 1;
-
+        static function registerUser(PDO $db, string $username, string $password, string $name, int $age, int $nif, int $phone, string $address) {
             $stmt = $db->prepare("INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client') 
             VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ?)"
             );
-            $stmt->execute(array($username, $profilePic, $password, $name, $age, $nif, $phone, $address, $client));
+            $stmt->execute(array($username, "../images/profilePic.png", $password, $name, $age, $nif, $phone, $address, 1));
         }
 
         static function userIsClient(PDO $db, int $userId) : int {

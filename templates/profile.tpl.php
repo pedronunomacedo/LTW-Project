@@ -83,20 +83,6 @@
             <div class="user-addresses" id="novo">
                 <?php $userAddresses = Address::getUserAddresses($db, $user->id);?>
                 <?php foreach($userAddresses as $address) { ?>
-                    <script>
-                        $(document).ready(function(){
-                            $('.butuns').click(function(){
-                                var clickBtnValue = $(this).val();
-                                var ajaxurl = '../actions/action_delete_address.php?id='+<?=$address->id?>;
-                                data =  {'action': clickBtnValue};
-                                $.post(ajaxurl, data, function (response) {
-                                    // Response div goes here.
-                                        document.getElementById("selam<?=$address->id?>").remove();
-                                        //document.getElementById("novo").innerHTML = "<small>selam<?=$address->id?></small>";
-                                });
-                            });
-                        });
-                    </script>
                     <div class="user-address" id="selam<?=$address->id?>">
                         <div class="pd">
                             <small><?=$address->address?></small>
@@ -106,6 +92,21 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('.butuns').click(function(){
+                                var clickBtnValue = $(this).val();
+                                var ajaxurl = '../actions/action_delete_address.php?id='+<?=$address->id?>;
+                                data =  {'action': clickBtnValue};
+                                $.post(ajaxurl, data, function (response) {
+                                    // Response div goes here.
+                                    //document.getElementById("selam<?=$address->id?>").remove();
+                                    var elem = document.getElementById("selam<?=$address->id?>");
+                                    elem.remove();
+                                });
+                            });
+                        });
+                    </script>
                 <?php } ?>
             </div>
             </div>

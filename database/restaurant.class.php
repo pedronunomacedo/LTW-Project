@@ -38,11 +38,11 @@
 
             while ($restaurant = $stmt->fetch()) {
                 $allRestaurants[] = new Restaurant(
-                $restaurant['id'],
-                $restaurant['idUser'],
-                $restaurant['name'],
-                $restaurant['address'],
-                $restaurant['type']
+                    $restaurant['id'],
+                    $restaurant['idUser'],
+                    $restaurant['name'],
+                    $restaurant['address'],
+                    $restaurant['type']
                 );
             }
 

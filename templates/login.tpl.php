@@ -42,7 +42,7 @@
             <span class="d-block lg">New User</span>
             <span class="d-block lighter">Create your user account to start ordering.</span>
             <div id="signup-container">
-                <form action="test.php" class="form-search needs-validation" id="reg-form" autocomplete="off" method="post">
+                <form action="../actions/action_register.php" class="form-search needs-validation" id="reg-form" autocomplete="off" method="post">
                     <!-- <div id="erur" class="err-signup error-placer alert alert-danger">
                         The email is invalid
                     </div> -->
@@ -75,8 +75,8 @@
                         <label for="addr_reg" class="form-control-label">Adress</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="status" value="client"> Client
-                        <input type="radio" name="status" value="owner"> Owner
+                        <input type="radio" name="status" value="client"> Client </input>
+                        <input type="radio" name="status" value="owner"> Owner </input>
                     </div>
                     <div class="form-group prvc-text">
                         <p>

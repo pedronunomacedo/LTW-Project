@@ -18,15 +18,16 @@
     $user = User::getUser($db, $session->getId());
 
     if ($user) {
-        $user->name = $_POST['name'];
-        $user->username = $_POST['username'];
-        $user->phone = intval($_POST['phone']);
+        if($_POST['name'] != '') $user->name = $_POST['name'];
+        if($_POST['username'] != '') $user->username = $_POST['username'];
+        if($_POST['phone'] != '') $user->phone = intval($_POST['phone']);
         $user->save($db);
 
-        $session->setName($user->username);
+        if ($_POST['username'] != '') $session->setName($_POST['username']);
         $userAddresses = Address::getUserAddresses($db, $user->id);
         $userOrders = Pedido::getUserOrders($db, $user->id);
         $favoriteUserRestaurants = Favorite::getUserFavoriteRestaurants($db, $user->id);
+        echo '$user->name = ' . $user->name . ' | $user->username = ' . $user->username . ' | $user->phone = ' . $user->phone;
         drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants);
     }
 
