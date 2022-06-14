@@ -12,20 +12,20 @@
     $user = User::getUserByUsername($db, $username);
 
     if ($user) {
-        if ($user->username == $username && $user->password == $password) { //se a password está correta
+        if ($user->username == $username && $user->password == $password) {
             $session = new Session();
             $session->setName($user->username);
             $session->setId($user->id);
             header('Location: ../pages/index.php?userUsername=' . $user->username);
         }
-        else if ($user->username == $username && $user->password != $password) { //se a password está errada
-            header('Location: ../pages/login.php?id=1');
+        else if ($user->username == $username && $user->password != $password) {
+            $session->addMessage('error', 'Wrong password!');
         }
         else {
-            header('Location: ../pages/login.php?id=1');
+            $session->addMessage('error', 'Wrong credentials!');
         }
     }
     else {
-        header('Location: ../pages/login.php?id=1');
+        header('Location: ../pages/login.php');
     }
 ?>

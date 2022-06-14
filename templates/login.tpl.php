@@ -4,15 +4,12 @@
     require_once(__DIR__ . '/../utils/session.php');
 ?>
 
-<?php function drawLoginSection($isPasswordWrong) { ?>
+<?php function drawLoginSection() { ?>
     <section class="login-box cntr">
         <div class="intro d-block rel">
             <h3 class="h3">ALREADY HAVE AN ACCOUNT</h3>
             <span class="d-block lg">Login</span>
             <span class="d-block lighter">Insert details.</span>
-            <?php if($isPasswordWrong == 1) { ?>
-                <span class="password-warning">Wrong Username or Password!</span>
-            <?php } ?>
             <div class="login-form">
                 <div class="login-form-inner">
                     <div class="login-form-content">
@@ -118,4 +115,4 @@
             <small>The fields followed by a * are mandatory.</small>
         </div>
     </section>
-<?php } ?>
+<?php } ?> 

@@ -10,14 +10,14 @@
     $session = new Session();
 
     $db = getDatabaseConnection();
-    $isPasswordWrong = $_GET['id'];
+
     drawHeader($session);
 
     ?> 
     <div class="box d-block"> 
         <p class="auth">Authentication</p> 
         <div class="both"> <?php
-            drawLoginSection($isPasswordWrong);
+            drawLoginSection();
             drawRegisterSection();
     ?> </div>
         <?php drawInformation(); ?>
