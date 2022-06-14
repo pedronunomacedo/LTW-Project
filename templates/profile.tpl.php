@@ -47,7 +47,7 @@
         </div>
 <?php } ?>
 
-<?php function drawMyProfile(PDO $db, User $user, array $userAddresses, array $userOrders, array $favoriteRestaurants) {
+<?php function drawMyProfile(PDO $db, User $user, array $userAddresses, array $userOrders, array $favoriteRestaurants, int $error) {
     $userProfilePic = $user->profilePic;
     $userUsername = $user->username;
     $userPassword = $user->password;
@@ -67,12 +67,23 @@
             </div> 
             <div class="my-profile-div">
                 <form action="../actions/action_edit_profile.php" method="post">
-                    <p><label for="name">Insert your new name</label></p>
-                    <input type="text" placeholder="Name" name="name"><p>
-                    <p><label for="username">Insert your new username: </label></p>
-                    <input type="text" id="name" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off" placeholder="Username">
-                    <p><label for="phone">Insert your new phone number</label></p>
-                    <input type="text" placeholder="Phone Number" name="phone"><p>
+                    <p><label for="newPassword">Step 1) Insert Your Old Password*</label></p>
+                    <input type="password" placeholder="Old Password" name="oldPassword"><p>
+                    <p>Step 2) Change Your Personal Info</p>
+                    <p><label for="name">Change Name:</label>
+                    <input type="text" id="name" name="name" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off" placeholder="<?php echo $userName?>"></p>
+                    <p><label for="username">Change Username: </label>
+                    <input type="text" id="username" name="username" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off" placeholder="<?php echo $userUsername?>">
+                    <p><label for="phone">Change Phone Number:</label>
+                    <input type="text" placeholder="<?php echo $userPhone?>" name="phone" class="form-control form-control-filled" autocorrect="off" autocomplete="off" autocapitalize="off"></p>
+                    <p><label for="newPassword">Change Your Password:</label>
+                    <input type="password" placeholder="New Password" name="newPassword"></p>
+                    <?php if ($error == 1){?>
+                        <p>Please, fill in all mandatory fields.</p>
+                        <?php } ?>
+                    <?php if ($error == '2'){?>
+                        <p>Wrong Password!</p>
+                        <?php } ?>
                     <button type="submit" class="btn-save-changes">Save changes</button>
                 </form>
                 <form action="../actions/action_logout.php" method="post" class="logout">
@@ -157,5 +168,5 @@
             </div>
         </div>
     </div>
-
+    <?php $error = 0; ?>
 <?php } ?>

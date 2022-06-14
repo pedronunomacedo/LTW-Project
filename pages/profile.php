@@ -27,6 +27,6 @@
 
   drawHeader($session);
   drawTitles();
-  drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants);
+  drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants, 0);
   drawFooter();
 ?>

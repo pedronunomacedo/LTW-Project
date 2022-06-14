@@ -17,17 +17,33 @@
 
     $user = User::getUser($db, $session->getId());
 
-    if ($user) {
+    if ($user && $_POST['oldPassword'] == $user->password) {
         if($_POST['name'] != '') $user->name = $_POST['name'];
         if($_POST['username'] != '') $user->username = $_POST['username'];
         if($_POST['phone'] != '') $user->phone = intval($_POST['phone']);
+        if($_POST['newPassword' != '']) $user->password = ($_POST['newPassword']);
         $user->save($db);
 
         if ($_POST['username'] != '') $session->setName($_POST['username']);
         $userAddresses = Address::getUserAddresses($db, $user->id);
         $userOrders = Pedido::getUserOrders($db, $user->id);
         $favoriteUserRestaurants = Favorite::getUserFavoriteRestaurants($db, $user->id);
-        drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants);
+        drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants, 0);
+    }
+    else if ($user && $_POST['oldPassword'] == ''){
+        if ($_POST['username'] != '') $session->setName($_POST['username']);
+        $userAddresses = Address::getUserAddresses($db, $user->id);
+        $userOrders = Pedido::getUserOrders($db, $user->id);
+        $favoriteUserRestaurants = Favorite::getUserFavoriteRestaurants($db, $user->id);
+        drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants,1);
+    }
+    else {
+        $error = 2;
+        if ($_POST['username'] != '') $session->setName($_POST['username']);
+        $userAddresses = Address::getUserAddresses($db, $user->id);
+        $userOrders = Pedido::getUserOrders($db, $user->id);
+        $favoriteUserRestaurants = Favorite::getUserFavoriteRestaurants($db, $user->id);
+        drawMyProfile($db, $user, $userAddresses, $userOrders, $favoriteUserRestaurants, 2);
     }
 
     header('Location: ../pages/profile.php?userId=' . $session->getId());
