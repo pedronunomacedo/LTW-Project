@@ -6,7 +6,7 @@
 
 <?php
     $username = $_POST['username_reg'];
-    $password = $_POST['password_reg'];
+    $password = md5($_POST['password_reg']); //encripts password as soon as it gets it (will work with encripted value at all times)
     $name = $_POST['name_reg'];
     $age = $_POST['age_reg'];
     $nif = $_POST['nif_reg'];

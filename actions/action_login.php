@@ -6,7 +6,7 @@
 
 <?php
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']); //encripts password as soon as it gets it (will work with encripted value at all times)
 
     $db = getDatabaseConnection();
     $user = User::getUserByUsername($db, $username);
