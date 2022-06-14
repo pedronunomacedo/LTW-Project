@@ -25,7 +25,7 @@
     $userExists = User::userExists($db, $username);
 
     if ($userExists == 0) { // User does not exist
-        User::registerUser($db, $username, $name, $password, $age, $nif, $phone, $address);
+        User::registerUser($db, $username, $password, $name, $age, $nif, $phone, $address);
         $user = User::getUserByUsername($db, $username);
         $session = new Session();
         $session->setName($user->username);
