@@ -4,12 +4,15 @@
     require_once(__DIR__ . '/../utils/session.php');
 ?>
 
-<?php function drawLoginSection() { ?>
+<?php function drawLoginSection($id) { ?>
     <section class="login-box cntr">
         <div class="intro d-block rel">
             <h3 class="h3">ALREADY HAVE AN ACCOUNT</h3>
             <span class="d-block lg">Login</span>
             <span class="d-block lighter">Insert details.</span>
+            <?php if($id == '1'){?>
+                <span class="error-message">Wrong Username/Password!</span>
+                <?php } ?>
             <div class="login-form">
                 <div class="login-form-inner">
                     <div class="login-form-content">
@@ -35,12 +38,15 @@
     </section>
 <?php } ?>
 
-<?php function drawRegisterSection() { ?>
+<?php function drawRegisterSection($id) { ?>
     <section class="register cntr">
         <div class="rel reg">
             <h3 class="h3">CREATE NEW ACCOUNT</h3>
             <span class="d-block lg">New User</span>
             <span class="d-block lighter">Create your user account to start ordering.</span>
+            <?php if($id == '2'){?>
+                <span class="error-message">Username Already in Use!</span>
+                <?php } ?>
             <div id="signup-container">
                 <form action="../actions/action_register.php" class="form-search needs-validation" id="reg-form" autocomplete="off" method="post">
                     <!-- <div id="erur" class="err-signup error-placer alert alert-danger">

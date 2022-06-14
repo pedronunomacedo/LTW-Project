@@ -34,6 +34,6 @@
     }
     else { // User already exists
         echo '<script>alert("error");</script>';
-        header('Location: ../pages/login.php');
+        header('Location: ../pages/login.php=id=2');
     }
 ?>

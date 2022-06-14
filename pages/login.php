@@ -10,15 +10,15 @@
     $session = new Session();
 
     $db = getDatabaseConnection();
-
+    $id = $_GET['id'];
     drawHeader($session);
 
     ?> 
     <div class="box d-block"> 
         <p class="auth">Authentication</p> 
         <div class="both"> <?php
-            drawLoginSection();
-            drawRegisterSection();
+            drawLoginSection($id);
+            drawRegisterSection($id);
     ?> </div>
         <?php drawInformation(); ?>
     </div> 

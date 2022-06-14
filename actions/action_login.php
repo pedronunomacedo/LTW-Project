@@ -19,13 +19,13 @@
             header('Location: ../pages/index.php?userUsername=' . $user->username);
         }
         else if ($user->username == $username && $user->password != $password) {
-            $session->addMessage('error', 'Wrong password!');
+            header('Location: ../pages/login.php?id=1');
         }
         else {
-            $session->addMessage('error', 'Wrong credentials!');
+            header('Location: ../pages/login.php?id=1');
         }
     }
     else {
-        header('Location: ../pages/login.php');
+        header('Location: ../pages/login.php?id=1');
     }
 ?>
