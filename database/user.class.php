@@ -107,11 +107,16 @@
             }
         }
 
-        static function registerUser(PDO $db, string $username, string $password, string $name, int $age, int $nif, int $phone, string $address) {
+        static function registerUser(PDO $db, string $username, string $password, string $name, int $age, int $nif, int $phone, string $address, string $status) {
             $stmt = $db->prepare("INSERT INTO User ('username','profilePic','password','name','age','nif','phone','address','client') 
             VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ?)"
             );
+            if($status == "client"){ //se for cliente
             $stmt->execute(array($username, "../images/profilePic.png", $password, $name, $age, $nif, $phone, $address, 1));
+            }
+            else{ //se for owner
+            $stmt->execute(array($username, "../images/profilePic.png", $password, $name, $age, $nif, $phone, $address, 0));
+            }
         }
 
         static function userIsClient(PDO $db, int $userId) : int {

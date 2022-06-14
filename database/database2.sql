@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS Review;
 DROP TABLE IF EXISTS Plate;
 DROP TABLE IF EXISTS Addresses;
 DROP TABLE IF EXISTS Favorites;
+DROP TABLE IF EXISTS Orders;
 
 /* CREATE TABLES */
 
@@ -134,25 +135,25 @@ VALUES
 INSERT INTO Restaurant ('idUser', 'name', 'address', 'type')
 VALUES
   (1,"MCDonalds","197-1124 Elementum, Rd.","burgers"),
-  (3,"Burger King","850-2661 Interdum. St.","burgers"),
-  (5,"Starbucks","Ap #686-5741 Ipsum Rd.","drinks"),
-  (7,"Café Costa","505-7922 Sit St.","drinks"),
-  (9,"Café Aliança","Ap #333-6320 Vulputate, Road","drinks"),
-  (11,"O Gato Pingado","Ap #175-3890 Curabitur Rd.","pizza"),
-  (13,"Restaurante El Taco","827-2876 Morbi Road","mexican"),
-  (15,"Delícias na Panela","363-3617 Pellentesque Rd.","sushi"),
-  (1,"Fogão a Lenha","663-7670 Proin Avenue","portuguese"),
-  (3,"Jogo de panela","728-6809 Purus St.","portuguese"),
-  (5,"Pizzaria O Portuense","Rua da Alegria","pizza"),
-  (7,"Sushimania", "Avenida da Senhora da Aparição", "sushi"),
-  (9,"Casa Filipe","728-6809 Purus St.","portuguese"),
-  (11,"Taberna da Circunvalação","Rua da Circunvalação","portuguese"),
-  (13,"Subway","Avenida da Boavista","sandwich"),
-  (15,"Gelataria Deluxe","Rua de St. Catarina","ice-cream"),
-  (1,"Café Gelatto","Rua da Constituição","ice-cream"),
-  (3,"Pans","Rua da Boavista","sandwich"),
-  (5,"Salão de Chá D. Rosinha", "Rua da Circunvalação","drinks"),
-  (7,"Pizza Hut", "Avenida dos Aliados","pizza");
+  (2,"Burger King","850-2661 Interdum. St.","burgers"),
+  (3,"Starbucks","Ap #686-5741 Ipsum Rd.","drinks"),
+  (4,"Café Costa","505-7922 Sit St.","drinks"),
+  (5,"Café Aliança","Ap #333-6320 Vulputate, Road","drinks"),
+  (6,"O Gato Pingado","Ap #175-3890 Curabitur Rd.","pizza"),
+  (7,"Restaurante El Taco","827-2876 Morbi Road","mexican"),
+  (8,"Delícias na Panela","363-3617 Pellentesque Rd.","sushi"),
+  (9,"Fogão a Lenha","663-7670 Proin Avenue","portuguese"),
+  (10,"Jogo de panela","728-6809 Purus St.","portuguese"),
+  (1,"Pizzaria O Portuense","Rua da Alegria","pizza"),
+  (2,"Sushimania", "Avenida da Senhora da Aparição", "sushi"),
+  (3,"Casa Filipe","728-6809 Purus St.","portuguese"),
+  (4,"Taberna da Circunvalação","Rua da Circunvalação","portuguese"),
+  (5,"Subway","Avenida da Boavista","sandwich"),
+  (6,"Gelataria Deluxe","Rua de St. Catarina","ice-cream"),
+  (7,"Café Gelatto","Rua da Constituição","ice-cream"),
+  (8,"Pans","Rua da Boavista","sandwich"),
+  (9,"Salão de Chá D. Rosinha", "Rua da Circunvalação","drinks"),
+  (10,"Pizza Hut", "Avenida dos Aliados","pizza");
 
 
 INSERT INTO Plate ('idRestaurant', 'name', 'category', 'price')
